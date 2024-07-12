@@ -32,7 +32,7 @@ body {
     font-family: 'Roboto', sans-serif;
     padding: 20px;
     border-radius: 10px;
-    min-width: 60%;
+    width: 60%;
     margin-bottom: 150px;
     height: 200px;
     display: flex;
@@ -63,7 +63,7 @@ img {
 }
 
 .row {
-    min-height: 50px;
+    height: 50px;
     display: flex;
     margin: auto;
     justify-content: center;
@@ -73,8 +73,8 @@ img {
 
 .letter {
     /* background-color: #FDECEF; */
-    min-width: 55px;
-    min-height: 55px;
+    width: 55px;
+    height: 55px;
     border-radius: 6px;
     border: 3px solid #69140E;
     font-size: 35px;
@@ -108,8 +108,8 @@ img {
 }
 
 .key {
-    min-width: 55px;
-    min-height: 55px;
+    width: 55px;
+    height: 55px;
     border-radius: 6px;
     background-color: #69140E;
     color: white;
@@ -129,12 +129,12 @@ img {
 }
 
 #enter {
-    min-width: 100px;
+    width: 100px;
 }
 
 .special {
     margin-left: 10px;
-    min-width: 80px;
+    width: 80px;
 }
 
 .key:hover {
