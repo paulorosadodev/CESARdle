@@ -159,7 +159,7 @@ img {
 
     .key {
         width: 35px;
-        height: 70px;
+        max-height: 60px;
     }
 
 }
