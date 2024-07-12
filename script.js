@@ -1,5 +1,5 @@
 let boxes = document.querySelectorAll('.letter');
-const word = 'ERICK';
+const word = 'VOLTZ';
 let letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZÇ';
 
 let i = 0;
