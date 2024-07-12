@@ -63,7 +63,7 @@ function handleKeyPress(key) {
                         
                         let loose = victory.getElementsByTagName('div')[0]
         
-                        loose.innerHTML = '<h1 style="color: #e41836">Você perdeu!</h1>' + '<h2>A palavra era: <strong>Erick</srong></h2>'
+                        loose.innerHTML = `<h1 style="color: #e41836">Você perdeu!</h1>' + '<h2>A palavra era: <strong>${word}</srong></h2>`
                         victory.style.backgroundImage = 'none'
         
                         victory.style.opacity = '1'
