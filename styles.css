@@ -146,20 +146,20 @@ img {
 
 @media (max-width: 768px) {
     #keyboard {
-        min-width: 90%;
+        width: 90%;
         margin: auto;
         margin-bottom: 20px;
     }
 
     .keyboardrow {
-        min-width: 100%;
+        width: 100%;
         margin: auto;
         justify-content: center;
     }
 
     .key {
-        min-width: 35px;
-        min-height: 70px;
+        width: 35px;
+        height: 70px;
     }
 
 }
