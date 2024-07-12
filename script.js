@@ -109,5 +109,6 @@ window.addEventListener('keydown', event => {
 document.querySelectorAll('.key').forEach(key => {
     key.addEventListener('click', () => {
         handleKeyPress(key.textContent);
+        key.style.backgroundColor = '#69140E'
     });
 });
