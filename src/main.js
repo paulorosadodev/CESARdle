@@ -1,7 +1,11 @@
 import { audio } from "./CESARdle/sounds.js";
+import { word } from "./CESARdle/words.js";
+import { words } from "./CESARdle/words.js";
 
 let boxes = document.querySelectorAll('.letter');
-const word = 'ERICK';
+
+console.log(String(word))
+
 let letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZÇ';
 
 let i = 0;
@@ -42,46 +46,62 @@ function handleKeyPress(key) {
             }
             max++;
         } else if (key === 'ENTER') {
-            let win = 0;
-            if (i - 5 - min >= 0) {
-                for (let x = i - 5 - min; x < i - min; x++) {
-                    if (boxes[x + min].innerHTML == `<span>${word[x]}</span>`) {
-                        boxes[x + min].style.backgroundColor = '#04F06A';
-                        win++
-                    } else if (word.includes(boxes[x + min].innerHTML[6])) {
-                        boxes[x + min].style.backgroundColor = '#fde74c';
-                    } else {
-                        boxes[x + min].style.backgroundColor = '#be0521';
+            let win = 0
+            let wordTry = ''
+
+            for (let y = 0; y < 5; y++) {
+                wordTry += boxes[y + min].textContent.toLowerCase()
+            }
+
+            if (words.includes(wordTry)) {
+                if (i - 5 - min >= 0) {
+                    for (let x = i - 5 - min; x < i - min; x++) {
+                        if (boxes[x + min].textContent.toLowerCase() == word[x].toLowerCase()) {
+                            boxes[x + min].style.backgroundColor = '#04F06A';
+                            win++
+                        } else if (word.toLowerCase().includes(boxes[x + min].textContent)) {
+                            boxes[x + min].style.backgroundColor = '#fde74c';
+                        } else {
+                            boxes[x + min].style.backgroundColor = '#be0521';
+                        }
                     }
-                }
-                if (win == 5) {
-                    audio.play()
-        
-                    let victory = document.getElementById("victory")
-        
-                    victory.style.opacity = '1'
-                    victory.style.visibility = 'visible'
-                } else {
-                    if (min == 20) {
+                    if (win == 5) {
+                        audio.play()
+            
                         let victory = document.getElementById("victory")
-                        
-                        let loose = victory.getElementsByTagName('div')[0]
-        
-                        loose.innerHTML = '<h1 style="color: #e41836">Você perdeu!</h1>' + '<h2>A palavra era: <strong>Erick</srong></h2>'
-                        victory.style.backgroundImage = 'none'
-        
+    
+                        victory.querySelector('h2').innerHTML = `A palavra era: <strong>${word}</strong>`
+            
                         victory.style.opacity = '1'
                         victory.style.visibility = 'visible'
-        
                     } else {
-                        handleNow(i, -1);
-                        cont++;
-                        row = 1;
-                        max = 1;
-                        min += 5;
+                        if (min == 20) {
+                            let victory = document.getElementById("victory")
+                            
+                            let loose = victory.getElementsByTagName('div')[0]
+            
+                            loose.innerHTML = '<h1 style="color: #e41836">Você perdeu!</h1>' + `<h2>A palavra era: <strong>${word}</srong></h2>`
+                            victory.style.backgroundImage = 'none'
+            
+                            victory.style.opacity = '1'
+                            victory.style.visibility = 'visible'
+            
+                        } else {
+                            handleNow(i, -1);
+                            cont++;
+                            row = 1;
+                            max = 1;
+                            min += 5;
+                        }
                     }
                 }
-
+            } else {
+                if (wordTry.length == 5) {
+                    document.getElementById(String((min/5) + 1)).classList.toggle('invalidWord')
+                    setTimeout(() => {
+                        document.getElementById(String((min/5) + 1)).classList.toggle('invalidWord')
+                    }, 600)
+                }
             }
     
             const rowCont = document.getElementById(`${String(cont)}`);
