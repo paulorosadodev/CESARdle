@@ -19,7 +19,6 @@ boxes[i].style.borderBottom = "7px solid #69140E";
 function handleKeyPress(key) {
     if (victory.style.opacity != 1) {
         if (key == '' || key == 'BACKSPACE') {
-            console.log('1')
             i -= 1;
             if (i < min) {
                 i = min;
@@ -31,7 +30,6 @@ function handleKeyPress(key) {
                 max = 1
             }
         } else if ((row == 1 && max <= 5) && letters.includes(key)) {
-            console.log(row, max)
             boxes[i].innerHTML = `<span>${key}</span>`;
             i++;
             if (i % 5 === 0) {
@@ -115,7 +113,12 @@ function handleKeyPress(key) {
 }
 
 function handleNow(i, increment) {
+    if (i + increment > 24) {
+        increment = 0
+    }
+
     boxes[i].style.borderBottom = "7px solid #69140E";
+
     if (increment != 0) {
         boxes[i+increment].style.borderBottom = 'none';
         boxes[i+increment].style.border = '3px solid #69140E';
