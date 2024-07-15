@@ -83,14 +83,14 @@ export const words = [
 export const word = words[Math.round(Math.random(words.length) * words.length)]
 
 function check(words) {
-    checkWords = {}
-    repeatWords = []
+    let checkWords = {}
+    let repeatWords = []
 
-    for (i of words) {
+    for (let i of words) {
         checkWords[i] = 0
     }
 
-    for (i of words) {
+    for (let i of words) {
         checkWords[i] += 1
 
         if (checkWords[i] > 1) {
