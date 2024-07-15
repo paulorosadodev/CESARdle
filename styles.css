@@ -233,9 +233,9 @@ img {
     }
 
     .key {
-        min-width: 2.125rem;
-        max-width: 2.125rem;
-        min-height: 4.0625rem;
+        min-width: 34px;
+        max-width: 34px;
+        min-height: 70px;
     }
 
     .special {
