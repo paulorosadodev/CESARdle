@@ -57,7 +57,7 @@ function handleKeyPress(key) {
                         if (boxes[x + min].textContent.toLowerCase() == word[x].toLowerCase()) {
                             boxes[x + min].style.backgroundColor = '#04F06A';
                             win++
-                        } else if (word.toLowerCase().includes(boxes[x + min].textContent)) {
+                        } else if (word.toLowerCase().includes(boxes[x + min].textContent.toLowerCase())) {
                             boxes[x + min].style.backgroundColor = '#fde74c';
                         } else {
                             boxes[x + min].style.backgroundColor = '#be0521';
