@@ -26,7 +26,6 @@ export const words = [
     'token',
     'union',
     'float',
-    'merge',
     'block',
     'graph',
     'hooks',
@@ -39,7 +38,69 @@ export const words = [
     'slice',
     'split',
     'tuple',
+    'linux',
+    'adobe',
+    'admin',
+    'cloud',
+    'click',
+    'drive',
+    'modal',
+    'pixel',
+    'macro',
+    'table',
+    'excel',
+    'track',
+    'email',
+    'fetch',
+    'alert',
+    'print',
+    'media',
+    'clone',
+    'login',
+    'chart',
+    'event',
+    'frame',
+    'layer',
+    'model',
+    'reset',
+    'robot',
+    'scroll',
+    'share',
+    'smart',
+    'sound',
+    'style',
+    'virus',
+    'class',
+    'glich',
+    'jpeg',
+    'limit',
+    'nodes',
+    'react',
+    'while',
+    'yield'
 ]
 
-
 export const word = words[Math.round(Math.random(words.length) * words.length)]
+
+function check(words) {
+    checkWords = {}
+    repeatWords = []
+
+    for (i of words) {
+        checkWords[i] = 0
+    }
+
+    for (i of words) {
+        checkWords[i] += 1
+
+        if (checkWords[i] > 1) {
+            repeatWords.push(i)
+        }
+
+    }
+
+    console.log(repeatWords)
+
+}
+
+check(words)
