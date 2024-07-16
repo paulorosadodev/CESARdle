@@ -39,7 +39,7 @@ body {
     position: absolute;
     width: 100vw;
     height: 100vh;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
 }
@@ -344,12 +344,12 @@ img {
     }
 
     .row {
-        height: 4.375rem;
+        height: 60px;
     }
 
     .letter {
-        height: 4.0625rem;
-        width: 4.0625rem;
+        height: 8vh;
+        width: 15vw;
         font-size: 2.625rem;
     }
 
@@ -361,15 +361,14 @@ img {
     }
 
     .keyboardrow {
-        width: 100%;
+        width: 90%;
         margin: auto;
         justify-content: center;
     }
 
     .key {
-        min-width: 34px;
-        min-height: 70px;
-        max-width: 34px;
+        min-width: 10%;
+        min-height: 4.375rem;
     }
 
     .special {
