@@ -1,10 +1,12 @@
 import { audio } from "./CESARdle/sounds.js";
 import { word } from "./CESARdle/words.js";
 import { words } from "./CESARdle/words.js";
+import * as modal from "./CESARdle/modal.js"
+
+modal.modalClose()
+modal.modalOpen()
 
 let boxes = document.querySelectorAll('.letter');
-
-console.log(String(word))
 
 let letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZÇ';
 
