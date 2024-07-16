@@ -18,6 +18,7 @@ body {
     text-align: center;
     width: 100dvw;
     height: 100dvh;
+
 }
 
 #open {
@@ -310,7 +311,7 @@ img {
 }
 
 
-@media (max-width: 481px) {
+@media (max-width: 481px) { 
 
     #instructions {
         width: 95dvw;
@@ -356,10 +357,12 @@ img {
     }
 
     #keyboard {
-        width: 90%;
+        width: 100dvw;
         margin: auto;
         margin-bottom: 0.9375rem;
         font-size: 0.9375rem;
+        position: absolute;
+        bottom: 0;
     }
 
     .keyboardrow {
