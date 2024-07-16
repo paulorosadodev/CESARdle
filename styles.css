@@ -344,12 +344,12 @@ img {
     }
 
     .row {
-        height: 60px;
+        height: 15vw;
     }
 
     .letter {
-        height: 8vh;
         width: 15vw;
+        height: 100%;
         font-size: 2.625rem;
     }
 
