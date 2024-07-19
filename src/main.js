@@ -1,14 +1,13 @@
 import { audio } from "./CESARdle/sounds.js";
 import { word } from "./CESARdle/words.js";
 import { words } from "./CESARdle/words.js";
-import * as modal from "./CESARdle/modal.js"
+import { instructionsModal } from "./CESARdle/modal.js";
 
-modal.modalClose()
-modal.modalOpen()
+instructionsModal.handle()
 
 let boxes = document.querySelectorAll('.letter');
 
-let letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZÇ';
+let letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
 let i = 0;
 let min = 0;

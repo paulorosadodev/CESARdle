@@ -21,7 +21,7 @@ body {
 
 }
 
-#open {
+#openInstructions {
     background: none;
     border: none;
     height: 24px;
@@ -32,17 +32,17 @@ body {
     color: rgb(105, 20, 14);
 }
 
-#open:hover {
+#openInstructions:hover {
     cursor: pointer;
 }
 
 #instructions-wrapper {
+    display: flex;
     background-color: #69140e83;
     z-index: 9999;
     position: absolute;
     width: 100dvw;
     height: 100dvh;
-    display: flex;
     justify-content: center;
     align-items: center;
 }

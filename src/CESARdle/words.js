@@ -78,7 +78,8 @@ export const words = [
     'nodes',
     'react',
     'while',
-    'yield'
+    'yield',
+    'redes',
 ]
 
 export const word = words[Math.round(Math.random(words.length) * words.length)]
