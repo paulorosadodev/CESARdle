@@ -42,6 +42,7 @@ export const words = [
     'adobe',
     'admin',
     'cloud',
+    'flask',
     'click',
     'drive',
     'modal',
@@ -96,11 +97,7 @@ function check(words) {
         if (checkWords[i] > 1) {
             repeatWords.push(i)
         }
-
     }
-
-    console.log(repeatWords)
-
 }
 
 check(words)

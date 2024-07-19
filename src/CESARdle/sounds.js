@@ -1,1 +1,1 @@
-export const audio =  new Audio('./assets/victory.mp3')
+export const audio =  new Audio('./assets/sounds/victory.mp3')

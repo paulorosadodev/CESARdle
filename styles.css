@@ -51,7 +51,7 @@ body {
     background-color: var(--main-color);
     position: relative;
     color: white;
-    width: 60dvw;
+    min-width: 60dvw;
     z-index: 9999;
     display: flex;
     margin-bottom: 180px;
@@ -108,6 +108,7 @@ body {
 #this {
     align-items: flex-start;
     justify-content: space-around;
+    text-align: justify;
 }
 
 #instruction-wrapper {
@@ -131,9 +132,10 @@ body {
 
 #victory {
     position: absolute;
-    width: 100ddvw;
-    height: 100ddvh;
-    background-image: url('./assets/confetti.gif');
+    background-color: #69140e83;
+    width: 100dvw;
+    height: 100dvh;
+    background-image: url('./assets/images/confetti.gif');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -397,6 +399,15 @@ img {
 
     #enter {
         min-width: 15dvw;
+    }
+
+    #instructions {
+        width: 90%;
+        margin-top: 8%;
+    }
+
+    #instructions h2 {
+        margin-top: 4%;
     }
 }
 
