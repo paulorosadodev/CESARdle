@@ -18,10 +18,9 @@ body {
     text-align: center;
     width: 100dvw;
     height: 100dvh;
-
 }
 
-#openInstructions {
+#open-instructions {
     background: none;
     border: none;
     height: 24px;
@@ -32,7 +31,7 @@ body {
     color: rgb(105, 20, 14);
 }
 
-#openInstructions:hover {
+#open-instructions:hover {
     cursor: pointer;
 }
 
@@ -73,6 +72,7 @@ body {
 #paulo a {
     text-decoration: none;
     color: var(--key-green);
+    font-weight: 700;
 }
 
 #paulo a:hover{
@@ -130,7 +130,7 @@ body {
     align-items: center;
 }
 
-#victory {
+#result-wrapper {
     position: absolute;
     background-color: #69140e83;
     width: 100dvw;
@@ -145,10 +145,10 @@ body {
     justify-content: center;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 3s;
+    transition: opacity 1s;
 }
 
-#victory div {
+#result-wrapper div {
     background-color: var(--main-color);
     font-family: 'Roboto', sans-serif;
     padding: 1.25rem;
@@ -164,11 +164,11 @@ body {
     z-index: 999;
 }
 
-#victory h1, strong {
+#result-wrapper h1, strong {
     color: #04F06A;
 }
 
-#victory h2 {
+#result-wrapper h2 {
     margin-top: 1.25rem;
     color: white;
 }
@@ -243,14 +243,22 @@ img {
     align-items: center;
     cursor: pointer;
     user-select: none;
+    pointer-events: none;
     transition: background 0.2s, scale 0.1s;
+}
+
+.key.active {
+    pointer-events: all;
+}
+
+.key.active:hover {
+    background-color: var(--key-red);
 }
 
 .keyboardrow {
     display: flex;
     gap: 0.3125rem;
 }
-
 
 .special {
     margin-left: 0.9375rem;
@@ -262,9 +270,6 @@ img {
     padding: 0px 0.625rem;
 }
 
-.key:hover {
-    background-color: var(--key-red);
-}
 .key:active {
     scale: 0.95;
 }
@@ -333,7 +338,7 @@ img {
         justify-content: center;
     }
 
-    #victory div {
+    #result div {
         margin-bottom: 11.25rem;
         height: 35%;
         width: 75%;

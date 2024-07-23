@@ -65,14 +65,12 @@ export const words = [
     'model',
     'reset',
     'robot',
-    'scroll',
     'share',
     'smart',
     'sound',
     'style',
     'virus',
     'class',
-    'glich',
     'jpeg',
     'limit',
     'nodes',
@@ -80,9 +78,11 @@ export const words = [
     'while',
     'yield',
     'redes',
+    'sheet',
+    'views',
 ]
 
-export const word = words[Math.round(Math.random(words.length) * words.length)]
+export const word = words[Math.floor(Math.random() * words.length)]
 
 function check(words) {
     let checkWords = {}

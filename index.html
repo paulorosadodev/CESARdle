@@ -1,133 +1,117 @@
-    <!DOCTYPE html>
-    <html lang="pt-br">
-
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>CESARdle</title>
-        <link rel="stylesheet" href="styles.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&family=Roboto:wght@400;900&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-        <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
-    </head>
-
-    <body>
-
-        <button id="openInstructions">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-help"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
-        </button>
-
-        <div id="instructions-wrapper">
-            <div id="instructions">
-                <svg xmlns="http://www.w3.org/2000/svg" id="closeInstructions" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
-                <h2>Você tem <strong>5 chances</strong> para acertar a palavra do dia</h2>
-                <p>Todas as palavras possuem relação com tecnologia e/ou com a CESAR School</p>
-                <div id="instruction-wrapper">
-                    <div class="instruction-wrapper">
-                        <div class="letterInstructions" style="background-color: var(--key-green);">L</div>
-                        <div class="letterInstructions" style="background-color: var(--key-yellow);">E</div>
-                        <div class="letterInstructions" style="background-color: var(--key-red);">D</div>
-                    </div>
-                    <div class="instruction-wrapper" id="this">
-                        <p>A palavra contém a letra <span>L</span> na posição correta</p>
-                        <p>A palavra contém a letra <span>E</span> mas na posição errada</p>
-                        <p>A palavra não contém a letra <span>D</span></p>
-                    </div>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CESARdle</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <button id="open-instructions">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-help"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
+    </button>
+    <div id="instructions-wrapper">
+        <div id="instructions">
+            <svg xmlns="http://www.w3.org/2000/svg" id="close-instructions" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+            <h2>Você tem <strong>5 chances</strong> para acertar a palavra do dia</h2>
+            <p>Todas as palavras possuem relação com tecnologia e/ou com a CESAR School</p>
+            <div id="instruction-wrapper">
+                <div class="instruction-wrapper">
+                    <div class="letterInstructions" style="background-color: var(--key-green);">L</div>
+                    <div class="letterInstructions" style="background-color: var(--key-yellow);">E</div>
+                    <div class="letterInstructions" style="background-color: var(--key-red);">D</div>
                 </div>
-                <p id="paulo">Desenvolvido por <a href="https://github.com/paulorosadodev" target="_blank">Paulo Rosado</a></p>
+                <div class="instruction-wrapper" id="this">
+                    <p>A palavra contém a letra <span>L</span> na posição correta</p>
+                    <p>A palavra contém a letra <span>E</span> mas na posição errada</p>
+                    <p>A palavra não contém a letra <span>D</span></p>
+                </div>
             </div>
+            <p id="paulo">Desenvolvido por <a href="https://github.com/paulorosadodev" target="_blank">Paulo Rosado</a></p>
         </div>
-
-        <div id="victory">
-            <div>
-                <h1>Você acertou!</h1>
-                <h2></h2>
-            </div>
+    </div>
+    <div id="result-wrapper">
+        <div id="result-display"></div>
+    </div>
+    <img src="./assets/images/logo.png" alt="CESARdle Logo">
+    <div id="div-wrapper">
+        <div class="row" id="1">
+            <div class="letter" style="border-bottom: 7px solid #69140E"></div>
+            <div class="letter"></div>
+            <div class="letter"></div>
+            <div class="letter"></div>
+            <div class="letter"></div>
         </div>
-
-        <img src="./assets/images/logo.png" alt="CESARdle Logo">
-
-        <div id="div-wrapper">
-            <div class="row" id="1">
-                <div class="letter"></div>
-                <div class="letter"></div>
-                <div class="letter"></div>
-                <div class="letter"></div>
-                <div class="letter"></div>
-            </div>
-            <div class="row" id="2">
-                <div class="letter deactive"></div>
-                <div class="letter deactive"></div>
-                <div class="letter deactive"></div>
-                <div class="letter deactive"></div>
-                <div class="letter deactive"></div>
-            </div>
-            <div class="row" id="3">
-                <div class="letter deactive"></div>
-                <div class="letter deactive"></div>
-                <div class="letter deactive"></div>
-                <div class="letter deactive"></div>
-                <div class="letter deactive"></div>
-            </div>
-            <div class="row" id="4">
-                <div class="letter deactive"></div>
-                <div class="letter deactive"></div>
-                <div class="letter deactive"></div>
-                <div class="letter deactive"></div>
-                <div class="letter deactive"></div>
-            </div>
-            <div class="row" id="5">
-                <div class="letter deactive"></div>
-                <div class="letter deactive"></div>
-                <div class="letter deactive"></div>
-                <div class="letter deactive"></div>
-                <div class="letter deactive"></div>
-            </div>
+        <div class="row" id="2">
+            <div class="letter deactive"></div>
+            <div class="letter deactive"></div>
+            <div class="letter deactive"></div>
+            <div class="letter deactive"></div>
+            <div class="letter deactive"></div>
         </div>
-
-        <div id="keyboard">
-            <div class="keyboardrow">
-                <div class="key">Q</div>
-                <div class="key">W</div>
-                <div class="key">E</div>
-                <div class="key">R</div>
-                <div class="key">T</div>
-                <div class="key">Y</div>
-                <div class="key">U</div>
-                <div class="key">I</div>
-                <div class="key">O</div>
-                <div class="key">P</div>
-            </div>
-            
-            <div class="keyboardrow">
-                <div class="key">A</div>
-                <div class="key">S</div>
-                <div class="key">D</div>
-                <div class="key">F</div>
-                <div class="key">G</div>
-                <div class="key">H</div>
-                <div class="key">J</div>
-                <div class="key">K</div>
-                <div class="key">L</div>
-                <div class="key special"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-delete"><path d="M10 5a2 2 0 0 0-1.344.519l-6.328 5.74a1 1 0 0 0 0 1.481l6.328 5.741A2 2 0 0 0 10 19h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2z"/><path d="m12 9 6 6"/><path d="m18 9-6 6"/></svg></div>
-            </div>
-            
-            <div class="keyboardrow">
-                <div class="key">Z</div>
-                <div class="key">X</div>
-                <div class="key">C</div>
-                <div class="key">V</div>
-                <div class="key">B</div>
-                <div class="key">N</div>
-                <div class="key">M</div>
-                <div class="key special" id="enter">ENTER</div>
-            </div>
-            
+        <div class="row" id="3">
+            <div class="letter deactive"></div>
+            <div class="letter deactive"></div>
+            <div class="letter deactive"></div>
+            <div class="letter deactive"></div>
+            <div class="letter deactive"></div>
         </div>
-
-        <script src="./src/main.js" type="module"></script>
-    </body>
-
-    </html>
+        <div class="row" id="4">
+            <div class="letter deactive"></div>
+            <div class="letter deactive"></div>
+            <div class="letter deactive"></div>
+            <div class="letter deactive"></div>
+            <div class="letter deactive"></div>
+        </div>
+        <div class="row" id="5">
+            <div class="letter deactive"></div>
+            <div class="letter deactive"></div>
+            <div class="letter deactive"></div>
+            <div class="letter deactive"></div>
+            <div class="letter deactive"></div>
+        </div>
+    </div>
+    <div id="keyboard">
+        <div class="keyboardrow">
+            <div class="key">Q</div>
+            <div class="key">W</div>
+            <div class="key">E</div>
+            <div class="key">R</div>
+            <div class="key">T</div>
+            <div class="key">Y</div>
+            <div class="key">U</div>
+            <div class="key">I</div>
+            <div class="key">O</div>
+            <div class="key">P</div>
+        </div>
+        <div class="keyboardrow">
+            <div class="key">A</div>
+            <div class="key">S</div>
+            <div class="key">D</div>
+            <div class="key">F</div>
+            <div class="key">G</div>
+            <div class="key">H</div>
+            <div class="key">J</div>
+            <div class="key">K</div>
+            <div class="key">L</div>
+            <div class="key special"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-delete"><path d="M10 5a2 2 0 0 0-1.344.519l-6.328 5.74a1 1 0 0 0 0 1.481l6.328 5.741A2 2 0 0 0 10 19h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2z"/><path d="m12 9 6 6"/><path d="m18 9-6 6"/></svg></div>
+        </div>
+        <div class="keyboardrow">
+            <div class="key">Z</div>
+            <div class="key">X</div>
+            <div class="key">C</div>
+            <div class="key">V</div>
+            <div class="key">B</div>
+            <div class="key">N</div>
+            <div class="key">M</div>
+            <div class="key special" id="enter">ENTER</div>
+        </div>
+    </div>
+    <script src="./src/main.js" type="module"></script>
+</body>
+</html>
