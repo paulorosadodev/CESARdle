@@ -90,7 +90,7 @@ export const handleKeyPress = key => {
                 }
             }
         activateRow(currentRow)
-    }
+    } 
 }
 
 // let display = document.getElementById('displayTime')
@@ -102,7 +102,7 @@ export const handleKeyPress = key => {
 
 //     nextDay.setDate(now.getDate() + 1)
 
-//     nextDay.setHours(0, 0, 0, 0)
+//     nextDay.setHours(0, 0, 0, 0)j
 
 //     let timeDifference = nextDay - now
 

@@ -14,6 +14,7 @@ export const words = [
     'logic',
     'bytes',
     'loops',
+    'enter',
     'stack',
     'shell',
     'parse',
@@ -82,7 +83,23 @@ export const words = [
     'views',
 ]
 
-export const word = words[Math.floor(Math.random() * words.length)]
+function getDayOfYear(date) {
+    const start = new Date(date.getFullYear(), 0, 0);
+    const diff = date - start;
+    const oneDay = 1000 * 60 * 60 * 24;
+    return Math.floor(diff / oneDay);
+}
+
+function getWordOfTheDay() {
+    const today = new Date();
+    const dayOfYear = getDayOfYear(today);
+    const wordIndex = dayOfYear % words.length;
+    return words[wordIndex];
+}
+
+export const word = getWordOfTheDay()
+
+// export const word = words[Math.floor(Math.random() * words.length)]
 
 function check(words) {
     let checkWords = {}
