@@ -6,7 +6,7 @@ export let lastWord = localStorage.getItem('lastWord')
 export let isPlaying = localStorage.getItem('isPlaying')
 
 export const updateLocalStorage = () => {
-    if (lastWord !== word) {
+    if (lastWord !== word && lastWord != '') {
         state.tries = ''
         state.lastWord = ''
         state.isPlaying = true

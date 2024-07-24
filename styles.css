@@ -135,7 +135,6 @@ body {
     background-color: #69140e83;
     width: 100dvw;
     height: 100dvh;
-    background-image: url('./assets/images/confetti.gif');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -148,14 +147,15 @@ body {
     transition: opacity 1s;
 }
 
-#result-wrapper div {
+#result-display {
     background-color: var(--main-color);
     font-family: 'Roboto', sans-serif;
-    padding: 1.25rem;
+    padding: 1.75rem;
+    padding-bottom: 0.80rem;
     border-radius: 0.625rem;
-    width: 60%;
+    min-width: 60%;
     margin-bottom: 9.375rem;
-    height: 12.5rem;
+    min-height: 12.5rem;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -171,6 +171,71 @@ body {
 #result-wrapper h2 {
     margin-top: 1.25rem;
     color: white;
+    margin-bottom: 30px;
+}
+
+#game-data {
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+#data {
+    display: flex;
+    justify-content: center;
+    gap: 3.125rem;
+    align-items: center;
+}
+
+#share {
+    font-family: sans-serif;
+    background-color: var(--key-green);
+    color: white;
+    font-weight: bolder;
+    text-shadow: 1px 1px 1px #69140e47;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    border: none;
+    font-size: 1rem;
+    padding: 1rem 1rem;
+    gap: 0.625rem;
+    border-radius: 5px;
+    transition: all .3s;
+}
+
+#share:hover {
+    background-color: #04c758;
+    cursor: pointer;
+}
+
+#share.lose {
+    background-color: var(--key-red);
+}
+
+#share.lose:hover {
+    cursor: pointer;
+    background-color: #9e031a;
+}
+
+#time {
+    display: flex;
+    flex-direction: column;
+    padding: 0.625rem;
+    gap: 0.3125rem;
+    color: var(--key-green);
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+#time.lose {
+    color: var(--key-red);
+}
+
+#display-time {
+    font-weight: 700;
+    color: white;
+    font-size: 30px;
 }
 
 img {
@@ -390,6 +455,21 @@ img {
 
     #enter {
         max-width: 3.75rem;
+    }
+    
+    #result-display {
+        max-width: 90%;
+        justify-content: center;
+        gap: 1.075rem;
+        height: 40%;
+    }
+
+    #data {
+        gap: 0.9375rem;
+    }
+
+    #data button {
+        height: 5rem;
     }
 
 }

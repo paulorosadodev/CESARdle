@@ -1,5 +1,6 @@
 import { state } from '../game/state.js'
-import { instructionsWrapper, instructionsOpen, instructionsClose } from './elements.js'
+import { updateDisplayTime } from './time.js'
+import { instructionsWrapper, instructionsOpen, instructionsClose, displayTime } from './elements.js'
 export class Modal {
     constructor(modal, openButtonId, closeButtonId) {
         this.modal = modal

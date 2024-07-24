@@ -1,6 +1,6 @@
 import { word } from "./words.js"
 import { green, brown, red } from "../content/colors.js"
-import { letterBoxes, resultDisplay, resultWrapper, keys } from "../content/elements.js"
+import { letterBoxes, resultDisplay, resultWrapper, keys, timerText, shareButton } from "../content/elements.js"
 
 export const toggleKeysActivity = () => {
     keys.forEach(key => {
@@ -12,19 +12,27 @@ export const showResultDisplay = win => {
     let message;
     let color;
 
+    let h1 = document.createElement('h1')
+    let h2 = document.createElement('h2')
+
     if (win) {
         message = 'Você venceu!'
         color = green
+        resultWrapper.style.backgroundImage = 'url(assets/images/confetti.gif)'
     } else {
         message = 'Você perdeu!'
         color = red
-
-        resultWrapper.style.backgroundImage = 'none'
+        timerText.classList.add('lose')
+        shareButton.classList.add('lose')
     }
 
-    resultDisplay.innerHTML += `<h1 style="color: ${color}">${message}</h1>`
+    h1.style.color = color
+    h1.innerText = message
 
-    resultDisplay.innerHTML += `<h2>A palavra era: <strong>${word}</strong></h2>`
+    h2.innerHTML = `A palavra era: <strong>${word}</strong>`
+
+    resultDisplay.firstElementChild.append(h1)
+    resultDisplay.firstElementChild.append(h2)
 
     resultWrapper.style.opacity = '1'
     resultWrapper.style.visibility = 'visible'
