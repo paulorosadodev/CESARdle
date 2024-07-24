@@ -1,5 +1,5 @@
+import { state } from '../game/state.js'
 import { instructionsWrapper, instructionsOpen, instructionsClose } from './elements.js'
-
 export class Modal {
     constructor(modal, openButtonId, closeButtonId) {
         this.modal = modal
@@ -8,6 +8,11 @@ export class Modal {
     }
 
     handle() {
+
+        if (!state.isPlaying) {
+            this.modal.style.display = 'none'
+        }
+
         this.openButton.addEventListener('click', () => {
             this.open()
         })

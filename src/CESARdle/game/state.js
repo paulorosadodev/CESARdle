@@ -1,3 +1,5 @@
 export const state = {
-    isPlaying: true
+    isPlaying: true,
+    tries: [],
+    lastWord: ''
 }

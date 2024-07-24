@@ -1,4 +1,6 @@
 import { word } from "./words.js"
+import { handleKeyPress } from "../index.js"
+import { isPlaying, tries } from "./storage.js"
 import { letterBoxes } from "../content/elements.js"
 import { green, yellow, red } from "../content/colors.js"
 
@@ -28,4 +30,10 @@ export const checkEachLetter = (currentLetterBox, currentRowFirstLetter) => {
     }
 
     return correctLetters
+}
+
+export const populateLetters = () => {
+    for (let letter of tries) {
+        handleKeyPress(letter.toUpperCase())
+    }
 }

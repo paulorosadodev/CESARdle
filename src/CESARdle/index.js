@@ -1,6 +1,7 @@
 import { state } from "./game/state.js";
 import { letterBoxes } from "./content/elements.js";
 import { letterIsValid, wordIsValid } from "./utils.js";
+import { appendTries, updateIsPlaying } from "./game/storage.js";
 import { getTriedWord, checkEachLetter } from "./game/gameUtils.js";
 import { toggleKeysActivity, showResultDisplay, invalidWordAnimation, activateRow, changeNextLetterStyle } from "./game/gameStyles.js";
 
@@ -46,7 +47,7 @@ export const handleKeyPress = key => {
 
         lettersInCurrentRow++;
 
-    } else if (key === 'ENTER') {
+    } else if (key === 'ENTER' || key === '\n') {
         
         let triedWord = getTriedWord(currentRowFirstLetter)
         
@@ -72,6 +73,8 @@ export const handleKeyPress = key => {
 
                         showResultDisplay(playerWin)
 
+                        console.log(state.isPlaying)
+
                         state.isPlaying = false
 
                         toggleKeysActivity()
@@ -83,6 +86,10 @@ export const handleKeyPress = key => {
                         currentRowFirstLetter += 5
                     }
                 }
+                if (key === 'ENTER') {
+                    appendTries(triedWord)
+                }
+                updateIsPlaying()
             }
             } else {
                 if (triedWord.length == 5) {
