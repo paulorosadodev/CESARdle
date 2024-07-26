@@ -1,7 +1,7 @@
 import { word } from "./words.js"
-import { green, brown, red } from "../content/colors.js"
-import { letterBoxes, resultDisplay, resultWrapper, keys, timerText, shareButton } from "../content/elements.js"
 import { resultModal } from "../content/Modal.js"
+import { green, brown, red } from "../content/colors.js"
+import { letterBoxes, resultDisplay, resultWrapper, keys, timerText, copyButton, copied } from "../content/elements.js"
 
 export const toggleKeysActivity = () => {
     keys.forEach(key => {
@@ -24,7 +24,7 @@ export const showResultDisplay = win => {
         message = 'Você perdeu!'
         color = red
         timerText.classList.add('lose')
-        shareButton.classList.add('lose')
+        copyButton.classList.add('lose')
     }
 
     h1.style.color = color
@@ -80,4 +80,17 @@ export const changeNextLetterStyle = (currentLetterBox, increment) => {
             }, 100)
         }
     }
+}
+
+export const showCopied = () => {
+    copied.classList.toggle('deactive')
+    copied.classList.toggle('active')
+    copyButton.classList.toggle('active')
+    setTimeout(() => {
+        copyButton.classList.toggle('active')
+    }, 900);
+    setTimeout(() => {
+        copied.classList.toggle('active')
+        copied.classList.toggle('deactive')
+    }, 1000);
 }

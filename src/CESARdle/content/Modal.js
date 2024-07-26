@@ -42,10 +42,6 @@ export class Modal {
         })
 
         window.addEventListener('keypress', (e) => {
-
-            if (e.key == 'Enter' && !this.closeButton && !this.isOpen() && !state.isPlaying && canOpen()) {
-                this.open()
-            }
             if (e.key == 'Enter' && !this.disableEnterKeyPress && this.isOpen()) {
                 this.close();
             }

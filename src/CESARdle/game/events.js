@@ -1,5 +1,7 @@
 import { state } from "./state.js"
+import { copyGame } from "../utils.js"
 import { handleKeyPress } from "../index.js"
+import { copyButton } from "../content/elements.js"
 import { brown, red, green } from "../content/colors.js"
 
 let touchHandled = false
@@ -44,3 +46,7 @@ export const waitKeyClick = () => {
         }
     })
 }
+
+copyButton.addEventListener('click', () => {
+    copyGame()
+})
