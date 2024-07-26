@@ -1,6 +1,6 @@
 import { state } from "./state.js"
 import { handleKeyPress } from "../index.js"
-import { brown, red } from "../content/colors.js"
+import { brown, red, green } from "../content/colors.js"
 
 let touchHandled = false
 
@@ -18,15 +18,23 @@ export const waitKeyClick = () => {
             key.addEventListener('touchstart', (e) => {
                 touchHandled = true
                 key.classList.remove('active')
-                key.style.backgroundColor = red
-                setTimeout(() => {
-                    key.classList.add('active')
-                    key.style.backgroundColor = brown
-                }, 100);
+                if (key.classList.contains('greenkey')) {
+                    key.style.backgroundColor = '#04c758'
+                    setTimeout(() => {
+                        key.classList.add('active')
+                        key.style.backgroundColor = green
+                    }, 100);
+                } else {
+                    key.style.backgroundColor = red
+                    setTimeout(() => {
+                        key.classList.add('active')
+                        key.style.backgroundColor = brown
+                    }, 100);
+                }
                 handleKeyPress(key.textContent)
                 e.preventDefault()
             });
-
+            
             key.addEventListener('click', (e) => {
                 if (!touchHandled) {
                     handleKeyPress(key.textContent)

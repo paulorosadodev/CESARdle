@@ -1,6 +1,7 @@
 import { state } from '../game/state.js'
 import { updateDisplayTime } from './time.js'
-import { instructionsWrapper, instructionsOpen, instructionsClose, resultWrapper } from './elements.js'
+import { instructionsWrapper, instructionsOpen, instructionsClose, resultWrapper, screen } from './elements.js'
+
 export class Modal {
     constructor(modal, openButtonId, closeButtonId) {
         this.modal = modal
@@ -32,12 +33,19 @@ export class Modal {
         }
 
         window.addEventListener('click', (e) => {
+            if (e.target.id == 'screen' && !this.closeButton && !this.isOpen() && !state.isPlaying && canOpen()) {
+                this.open()
+            }
             if (e.target == this.modal) {
                 this.close()
             }
         })
 
         window.addEventListener('keypress', (e) => {
+
+            if (e.key == 'Enter' && !this.closeButton && !this.isOpen() && !state.isPlaying && canOpen()) {
+                this.open()
+            }
             if (e.key == 'Enter' && !this.disableEnterKeyPress && this.isOpen()) {
                 this.close();
             }
@@ -59,9 +67,13 @@ export class Modal {
     }
 
     isOpen() {
-        return this.modal.style.display === 'flex';
+        return this.modal.style.display === 'flex'
     }
 }
 
 export const instructionsModal = new Modal(instructionsWrapper, instructionsOpen, instructionsClose)
 export const resultModal = new Modal(resultWrapper)
+
+function canOpen() {
+    return !instructionsModal.isOpen();
+}

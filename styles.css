@@ -20,6 +20,18 @@ body {
     height: 100dvh;
 }
 
+.modal-opener {
+    z-index: 9999;
+}
+
+#screen {
+    display: none;
+    height: 100dvh;
+    position: absolute;
+    width: 100dvw;
+    z-index: 9998;
+}
+
 #open-instructions {
     background: none;
     border: none;
@@ -317,6 +329,14 @@ img {
 
 .key.active:hover {
     background-color: var(--key-red);
+}
+
+.greenkey {
+    background-color: var(--key-green);
+}
+
+.greenkey.active:hover {
+    background-color: #04c758;
 }
 
 .keyboardrow {
