@@ -478,6 +478,28 @@ img {
 
 }
 
+@media (max-width: 395px) {
+    #result-display h1 {
+        font-size: 1.7rem;
+    }
+
+    #result-display h2 {
+        font-size: 1.2rem;
+    }
+
+    #share {
+        font-size: 0.8rem;
+    }
+
+    #time {
+        font-size: 0.8rem;
+    }
+
+    #display-time {
+        font-size: 1.5rem;
+    }
+}
+
 @media (max-width: 676px) {
     .key {
         min-width: 8dvw;

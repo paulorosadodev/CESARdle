@@ -46,8 +46,8 @@ export const invalidWordAnimation = currentRowFirstLetter => {
 }
 
 export const activateRow = rowId => {
-    const row = document.getElementById(`${String(rowId)}`);
-    const lettersInRow = row.querySelectorAll('.letter');
+    const row = document.getElementById(`${String(rowId)}`)
+    const lettersInRow = row.querySelectorAll('.letter')
 
     lettersInRow.forEach((div) => {
         div.classList.remove('deactive')
@@ -67,17 +67,17 @@ export const changeNextLetterStyle = (currentLetterBox, increment) => {
     if (temporaryIncrement == 2) {
         increment = -1
     } else {
-        letterBoxes[currentLetterBox].style.borderBottom = `7px solid ${brown}`;
+        letterBoxes[currentLetterBox].style.borderBottom = `7px solid ${brown}`
     }
 
     if (increment != 0) {
-        letterBoxes[currentLetterBox + increment].style.borderBottom = 'none';
-        letterBoxes[currentLetterBox + increment].style.border = `3px solid ${brown}`;
+        letterBoxes[currentLetterBox + increment].style.borderBottom = 'none'
+        letterBoxes[currentLetterBox + increment].style.border = `3px solid ${brown}`
         if (increment < 0 && temporaryIncrement != 3) {
-            letterBoxes[currentLetterBox + increment].style.scale = '1.25';
+            letterBoxes[currentLetterBox + increment].style.scale = '1.25'
             setTimeout(() => {
-                letterBoxes[currentLetterBox + increment].style.scale = '1';
-            }, 100);
+                letterBoxes[currentLetterBox + increment].style.scale = '1'
+            }, 100)
         }
     }
 }
