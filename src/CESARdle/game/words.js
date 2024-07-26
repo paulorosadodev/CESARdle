@@ -15,6 +15,7 @@ export const words = [
     'bytes',
     'loops',
     'enter',
+    'figma',
     'stack',
     'shell',
     'parse',
@@ -81,6 +82,7 @@ export const words = [
     'redes',
     'sheet',
     'views',
+    'macos'
 ]
 
 function getDayOfYear(date) {
@@ -90,14 +92,14 @@ function getDayOfYear(date) {
     return Math.floor(diff / oneDay)
 }
 
-function getWordOfTheDay() {
+export function getWordOfTheDay() {
     const today = new Date()
     const dayOfYear = getDayOfYear(today)
     const wordIndex = dayOfYear % words.length
     return words[wordIndex]
 }
 
-export const word = getWordOfTheDay()
+export let word = getWordOfTheDay()
 
 // export const word = words[Math.floor(Math.random() * words.length)]
 

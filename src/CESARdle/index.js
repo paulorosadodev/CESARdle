@@ -66,15 +66,15 @@ export const handleKeyPress = key => {
 
                     state.isPlaying = false
                     state.lastWord = word
-
+                    
                     toggleKeysActivity()
 
                     setWordInLocalStorage()
-
+                    
                 } else {
                     if (currentRowFirstLetter == 20) {
                         playerWin = false
-
+                        
                         showResultDisplay(playerWin)
 
                         state.isPlaying = false

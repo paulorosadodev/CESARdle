@@ -36,7 +36,7 @@ body {
 }
 
 #instructions-wrapper {
-    display: flex;
+    display: none;
     background-color: #69140e83;
     z-index: 9999;
     position: absolute;
@@ -139,7 +139,6 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     z-index: 99999;
-    display: flex;
     align-items: center;
     justify-content: center;
     opacity: 0;
@@ -464,12 +463,17 @@ img {
         height: 40%;
     }
 
+    #time {
+        max-width: 50%;
+    }
+
     #data {
         gap: 0.9375rem;
     }
 
     #data button {
         height: 5rem;
+        max-width: 50%;
     }
 
 }

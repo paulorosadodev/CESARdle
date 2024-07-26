@@ -1,6 +1,7 @@
 import { word } from "./words.js"
 import { green, brown, red } from "../content/colors.js"
 import { letterBoxes, resultDisplay, resultWrapper, keys, timerText, shareButton } from "../content/elements.js"
+import { resultModal } from "../content/Modal.js"
 
 export const toggleKeysActivity = () => {
     keys.forEach(key => {
@@ -34,8 +35,7 @@ export const showResultDisplay = win => {
     resultDisplay.firstElementChild.append(h1)
     resultDisplay.firstElementChild.append(h2)
 
-    resultWrapper.style.opacity = '1'
-    resultWrapper.style.visibility = 'visible'
+    resultModal.open()
 }
 
 export const invalidWordAnimation = currentRowFirstLetter => {
