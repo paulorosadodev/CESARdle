@@ -24,6 +24,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    width: 100dvw;
     gap: 5.625rem;
 }
 
@@ -577,6 +578,31 @@ img, #repository-link {
 
     #display-time {
         font-size: 1.5rem;
+    }
+
+    #stats {
+        margin-bottom: 8rem;
+    }
+
+    .stats-bar {
+        max-width: 2rem;
+    }
+
+    .stats-title {
+        font-size: 0.6rem;
+    }
+
+    .data-stats {
+        max-width: 5rem;
+        margin-bottom: 0.4rem;
+    }
+
+    .data-number {
+        font-size: 1.5rem;
+    }
+
+    .data-title {
+        font-size: 0.6rem;
     }
 
     #stats p {
