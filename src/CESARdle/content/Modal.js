@@ -55,7 +55,6 @@ export class Modal {
     }
 
     open() {
-        console.log('abriu', this.modal)
         this.modal.style.display = 'flex'
         setTimeout(() => {
             this.modal.style.opacity = '1'

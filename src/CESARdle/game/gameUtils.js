@@ -19,7 +19,6 @@ export const checkEachLetter = (currentLetterBox, currentRowFirstLetter) => {
 
     for (let x = currentLetterBox - 5 - currentRowFirstLetter; x < currentLetterBox - currentRowFirstLetter; x++) {
         const key = document.querySelector(`#${letterBoxes[x + currentRowFirstLetter].textContent}`)
-        // console.log(letterBoxes[x+currentRowFirstLetter].textContent.toLowerCase(), word[x].toLowerCase())
         if (letterBoxes[x+currentRowFirstLetter].textContent.toLowerCase() == word[x].toLowerCase()) {
             key.classList.add('greenkey')
             key.style.backgroundColor = green;
@@ -38,6 +37,6 @@ export const checkEachLetter = (currentLetterBox, currentRowFirstLetter) => {
 
 export const populateLetters = () => {
     for (let letter of tries) {
-        handleKeyPress(letter.toUpperCase())
+        handleKeyPress(letter.toUpperCase(), true)
     }
 }

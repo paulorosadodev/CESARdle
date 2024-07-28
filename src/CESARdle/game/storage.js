@@ -3,7 +3,9 @@ import { state } from "./state.js";
 
 export let tries = localStorage.getItem('tries')
 export let lastWord = localStorage.getItem('lastWord')
+export let winStreak = localStorage.getItem('winStreak')
 export let isPlaying = localStorage.getItem('isPlaying')
+export let triesAmount = JSON.parse(localStorage.getItem('triesAmount'))
 
 export const updateLocalStorage = () => {
     if (lastWord !== word && lastWord != '') {
@@ -19,14 +21,24 @@ export const updateLocalStorage = () => {
         lastWord = state.lastWord
         isPlaying = state.isPlaying
     } else {
-        if (!isPlaying) {
-            localStorage.setItem('isPlaying', state.isPlaying)
-        }
         if (!tries) {
             localStorage.setItem('tries', state.tries)
         }
         if (!lastWord) {
             localStorage.setItem('lastWord', state.lastWord)
+        }
+        if (!winStreak) {
+            localStorage.setItem('winStreak', state.winStreak)
+        } else {
+            state.winStreak = Number(winStreak)
+        }
+        if (!isPlaying) {
+            localStorage.setItem('isPlaying', state.isPlaying)
+        }
+        if (!triesAmount) {
+            localStorage.setItem('triesAmount', JSON.stringify(state.triesAmount))
+        } else {
+            state.triesAmount = triesAmount
         }
     } 
 }
@@ -41,4 +53,12 @@ export const updateIsPlayingInLocalStorage = () => {
 
 export const setWordInLocalStorage = () => {
     localStorage.setItem('lastWord', state.lastWord)
+}
+
+export const updateWinStreak = () => {
+    localStorage.setItem('winStreak', state.winStreak)
+}
+
+export const updateTriesAmount = () => {
+    localStorage.setItem('triesAmount', JSON.stringify(state.triesAmount))
 }

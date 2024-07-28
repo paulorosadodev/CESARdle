@@ -9,7 +9,7 @@ let touchHandled = false
 export const waitKeyPress = () => {
     window.addEventListener('keydown', event => {
         if (state.isPlaying === true) {
-            handleKeyPress(event.key.toUpperCase())
+            handleKeyPress(event.key.toUpperCase(), false)
         }
     });
 }
@@ -27,7 +27,7 @@ export const waitKeyClick = () => {
             
             key.addEventListener('click', (e) => {
                 if (!touchHandled) {
-                    handleKeyPress(key.textContent);
+                    handleKeyPress(key.textContent, false);
                 }
                 touchHandled = false;
             });
@@ -50,7 +50,7 @@ const handleTouch = (key) => {
             key.style.backgroundColor = brown
         }, 100)
     }
-    handleKeyPress(key.textContent)
+    handleKeyPress(key.textContent, false)
 }
 
 

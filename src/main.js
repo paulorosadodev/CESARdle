@@ -1,4 +1,5 @@
-import { updateWord } from "./CESARdle/game/words.js";
+import { updateWord, word } from "./CESARdle/game/words.js";
+import { displayGameStats } from "./CESARdle/utils.js";
 import { startDisplayTime } from "./CESARdle/content/time.js";
 import { populateLetters } from "./CESARdle/game/gameUtils.js";
 import { toggleKeysActivity } from "./CESARdle/game/gameStyles.js";
@@ -6,11 +7,11 @@ import { waitKeyClick, waitKeyPress } from "./CESARdle/game/events.js";
 import { isPlaying, updateLocalStorage } from "./CESARdle/game/storage.js";
 import { instructionsModal, resultModal, statsModal } from "./CESARdle/content/Modal.js";
 
-// console.log(word)
-
 startDisplayTime()
 
 updateLocalStorage()
+
+displayGameStats()
 
 populateLetters()
 

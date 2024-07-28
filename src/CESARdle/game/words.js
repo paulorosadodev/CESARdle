@@ -1,17 +1,18 @@
 export const words = [
-    'erick', 'erico', 'cesar', 'apolo', 'joyce', 'carol', 'cruds', 'cafes', 'unity', 'scrum',
     'array', 'debug', 'logic', 'bytes', 'loops', 'enter', 'figma', 'stack', 'shell', 'parse',
     'index', 'ascii', 'cache', 'input', 'merge', 'query', 'token', 'union', 'float', 'block',
     'graph', 'hooks', 'route', 'scope', 'patch', 'proxy', 'regex', 'shift', 'slice', 'split',
     'vectr', 'linux', 'adobe', 'admin', 'cloud', 'flask', 'click', 'drive', 'modal', 'pixel',
     'macro', 'table', 'excel', 'track', 'email', 'fetch', 'alert', 'print', 'media', 'clone',
+    'erick', 'erico', 'cesar', 'macos', 'lista', 'mocks', 'tupla', 'cafes', 'unity', 'scrum',
     'login', 'chart', 'event', 'frame', 'layer', 'model', 'reset', 'robot', 'share', 'smart',
     'sound', 'style', 'virus', 'class', 'limit', 'nodes', 'react', 'while', 'yield', 'nuvem',
-    'redes', 'sheet', 'views', 'macos', 'lista', 'mocks', 'tupla', 'teste', 'agile', 'techs', 
+    'redes', 'sheet', 'views', 'apolo', 'joyce', 'carol', 'cruds', 'teste', 'agile', 'techs', 
     'hacks', 'cyber', 'infos', 'azure', 'ifood', 'apple', 'nikon', 'epson', 'gopro', 'phone', 
     'tesla', 'games', 'trade', 'avast', 'arrow', 'specs', 'users', 'codes', 'mouse', 'notes', 
     'slack', 'async', 'await', 'swift', 'scala', 'julia', 'cobol', 'ocaml', 'canva', 'krita',
-    'false', 'chunk', 'blobs', 'local',
+    'false', 'chunk', 'blobs', 'local', 'wires', 'nosql', 'redis', 'mongo', 'daily', 'issue',
+    'utils', 'popup', 'space', 'kodak',
 ]
 
 export function getDayOfYear(date) {

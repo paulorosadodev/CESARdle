@@ -17,30 +17,90 @@
         <div id="stats">
             <svg xmlns="http://www.w3.org/2000/svg" id="close-stats" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
             <h2>Seu desempenho</h2>
+            <div id="stats-message">
+                <h3>Jogue pelo menos uma vez para visualizar o seu desempenho</h3>
+                <p>Se seus dados não apareceram, recarregue a página.</p>
+            </div>
             <div id="stats-display">
-                <div id="1rows">
-                    <span class="stats-title"></span>
-                    <div class="stats-bar"></div>
+                <div id="1rows" class="stats-content">
+                    <div class="stats-bar">
+                        <span class="bar-title">?</span>
+                        <div class="fill-wrapper">
+                            <div class="stats-bar-fill" id="one"></div>
+                        </div>
+                    </div>
+                    <span class="stats-title">1º tentativa</span>
                 </div>
-                <div id="2rows">
-                    <span class="stats-title"></span>
-                    <div class="stats-bar"></div>
+                <div id="2rows" class="stats-content">
+                    <div class="stats-bar">
+                        <span class="bar-title">?</span>
+                        <div class="fill-wrapper">
+                                <div class="stats-bar-fill" id="two"></div>
+                        </div>
+                    </div>
+                    <span class="stats-title">2º tentativa</span>
                 </div>
-                <div id="3rows">
-                    <span class="stats-title"></span>
-                    <div class="stats-bar"></div>
+                <div id="3rows" class="stats-content">
+                    <div class="stats-bar">
+                        <span class="bar-title">?</span>
+                        <div class="fill-wrapper">
+                            <div class="stats-bar-fill" id="three"></div>
+                        </div>
+                    </div>
+                    <span class="stats-title">3º tentativa</span>
                 </div>
-                <div id="4rows">
-                    <span class="stats-title"></span>
-                    <div class="stats-bar"></div>
+                <div id="4rows" class="stats-content">
+                    <div class="stats-bar">
+                        <span class="bar-title">?</span>
+                        <div class="fill-wrapper">
+                            <div class="stats-bar-fill" id="four"></div>
+                        </div>
+                    </div>
+                    <span class="stats-title">4º tentativa</span>
                 </div>
-                <div id="5rows">
-                    <span class="stats-title"></span>
-                    <div class="stats-bar"></div>
+                <div id="5rows" class="stats-content">
+                    <div class="stats-bar">
+                        <span class="bar-title">?</span>
+                        <div class="fill-wrapper">
+                            <div class="stats-bar-fill" id="five"></div>
+                        </div>
+                    </div>
+                    <span class="stats-title">5º tentativa</span>
                 </div>
-                <div id="lost">
-                    <span class="stats-title"></span>
-                    <div class="stats-bar"></div>
+                <div id="lost" class="stats-content">
+                    <div class="stats-bar">
+                        <span class="bar-title">?</span>
+                        <div class="fill-wrapper">
+                            <div class="stats-bar-fill" id="lost"></div>
+                        </div>
+                    </div>
+                    <span class="stats-title">Errou todas</span>
+                </div>
+            </div>
+            <div id="stats-data-wrapper">
+                <div class="data-stats" id="games-amount">
+                    <span class="data-number" id="data-amount">
+                        ?
+                    </span>
+                    <span class="data-title">
+                        jogos
+                    </span>
+                </div>
+                <div class="data-stats" id="win-percentual">
+                    <span class="data-number" id="data-percentual">
+                        ?
+                    </span>
+                    <span class="data-title">
+                        acertos
+                    </span>
+                </div>
+                <div class="data-stats" id="win-streak">
+                    <span class="data-number" id="data-streak">
+                        ?
+                    </span>
+                    <span class="data-title">
+                        sequência
+                    </span>
                 </div>
             </div>
         </div>
@@ -84,7 +144,9 @@
         <button id="open-stats" class="modal-opener">
             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-no-axes-column"><line x1="18" x2="18" y1="18" y2="8"/><line x1="12" x2="12" y1="18" y2="4"/><line x1="6" x2="6" y1="18" y2="12"/></svg>
         </button>
-        <img src="./assets/images/logo.png" alt="CESARdle Logo">
+        <a href="https://github.com/paulorosadodev/CESARdle" id="repository-link" target="_blank">
+            <img src="./assets/images/logo.png" alt="CESARdle Logo">
+        </a>
         <button id="open-instructions" class="modal-opener">
             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-help"><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
         </button>

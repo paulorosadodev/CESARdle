@@ -1,5 +1,7 @@
-import { words, word } from "./game/words.js";
-import { showCopied } from "./game/gameStyles.js";
+import { state } from "./game/state.js"
+import { words, word } from "./game/words.js"
+import { showCopied } from "./game/gameStyles.js"
+import { barsFill, dataAmount, dataPercentual, dataStreak, statsDisplay, statsMessage, statsDataWrapper, reloadMessage } from "./content/elements.js"
 
 export const letterIsValid = key => {
     const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -88,4 +90,61 @@ function getTriedWords() {
 
     return triedWords
 
+}
+
+export const displayGameStats = () => {
+    const gameStats = getGameStats()
+
+    if (gameStats.gamesAmount == 0) {
+        statsMessage.style.display = 'flex'
+    } else {
+        statsMessage.style.display = 'none'
+        barsFill.forEach(barFill => {
+            let barHeight = getTriePercent(gameStats.triesAmount, barFill.id)
+            barFill.parentElement.previousElementSibling.textContent = gameStats.triesAmount[barFill.id]
+            barFill.style.transform = `scaleY(${barHeight}%)`
+        })
+    
+        dataStreak.textContent = gameStats.winStreak
+        dataAmount.textContent = gameStats.gamesAmount
+        dataPercentual.textContent = gameStats.winPercetual + '%'
+    }
+}
+
+function getGameStats() {
+    let ctx = {}
+
+    ctx['winStreak'] = state.winStreak
+    ctx['triesAmount'] = state.triesAmount
+
+    ctx['gamesAmount'] = getTriePercent(ctx.triesAmount, true)
+
+    let lostPercent = getTriePercent(ctx.triesAmount, 'lost')
+
+    if (isNaN(lostPercent)) {
+        ctx['winPercetual'] = 0
+    } else {
+        ctx['winPercetual'] = 100 - lostPercent
+    }
+
+    return ctx
+}
+
+function getTriePercent(triesAmount, trie) {
+    let sum = 0
+    let triesPercents = {}
+
+    for (let trie in triesAmount) {
+        sum += triesAmount[trie]
+    }
+
+    if (trie === true) {
+        return sum
+    }
+
+    for (let trie in triesAmount) {
+        triesPercents[trie] = Math.floor(triesAmount[trie]/sum*100).toFixed(0)
+    }
+
+    return triesPercents[trie]
 }

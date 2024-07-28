@@ -1,10 +1,10 @@
 import { word } from "./game/words.js";
 import { state } from "./game/state.js";
-import { letterIsValid, wordIsValid } from "./utils.js";
 import { letterBoxes, screen } from "./content/elements.js";
 import { getTriedWord, checkEachLetter } from "./game/gameUtils.js";
-import { appendTriesInLocalStorage, updateIsPlayingInLocalStorage, setWordInLocalStorage } from "./game/storage.js";
+import { letterIsValid, wordIsValid, displayGameStats} from "./utils.js";
 import { toggleKeysActivity, showResultDisplay, invalidWordAnimation, activateRow, changeNextLetterStyle } from "./game/gameStyles.js";
+import { appendTriesInLocalStorage, updateIsPlayingInLocalStorage, setWordInLocalStorage, updateTriesAmount, updateWinStreak } from "./game/storage.js";
 
 
 let currentRow = 1
@@ -13,7 +13,7 @@ let lettersInCurrentRow = 1
 let currentRowFirstLetter = 0
 let previousLetterBox = currentLetterBox - 1
 
-export const handleKeyPress = (key) => {
+export const handleKeyPress = (key, isLoading) => {
     if (key == '' || key == 'BACKSPACE') {
         currentLetterBox -= 1
         previousLetterBox -= 1
@@ -63,6 +63,10 @@ export const handleKeyPress = (key) => {
 
                     showResultDisplay(playerWin)
 
+                    if (!isLoading) {
+                        state.triesAmount[getKey(currentRow)] += 1
+                        state.winStreak += 1
+                    }
                     state.isPlaying = false
                     screen.style.display = 'block'
                     state.lastWord = word
@@ -76,7 +80,11 @@ export const handleKeyPress = (key) => {
                         playerWin = false
                         
                         showResultDisplay(playerWin)
-                        
+
+                        if (!isLoading) {
+                            state.triesAmount[getKey(0)] += 1
+                            state.winStreak = 0
+                        }
                         state.isPlaying = false
                         screen.style.display = 'block'
                         state.lastWord = word
@@ -94,8 +102,12 @@ export const handleKeyPress = (key) => {
                 }
                 state.tries += triedWord + '\n'
 
+                updateWinStreak()
+                updateTriesAmount()
                 appendTriesInLocalStorage()
                 updateIsPlayingInLocalStorage()
+
+                displayGameStats()
             }
             } else {
                 if (triedWord.length == 5) {
@@ -104,4 +116,21 @@ export const handleKeyPress = (key) => {
             }
         activateRow(currentRow)
     } 
+}
+
+function getKey(row) {
+    switch (row) {
+        case 1:
+            return 'one'
+        case 2:
+            return 'two' 
+        case 3:
+            return 'three'
+        case 4:
+            return 'four'
+        case 5:
+            return 'five'
+        default:
+            return 'lost'
+    }
 }
