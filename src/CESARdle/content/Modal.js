@@ -1,10 +1,12 @@
+import { brown } from './colors.js'
 import { state } from '../game/state.js'
 import { updateDisplayTime } from './time.js'
-import { instructionsWrapper, instructionsOpen, instructionsClose, resultWrapper, screen } from './elements.js'
+import { instructionsWrapper, instructionsOpen, instructionsClose, resultWrapper, statsWrapper, statsOpen, statsClose } from './elements.js'
 
 export class Modal {
-    constructor(modal, openButtonId, closeButtonId) {
+    constructor(modal, openButtonId, closeButtonId, isResult) {
         this.modal = modal
+        this.isResult = isResult
         this.openButton = openButtonId
         this.closeButton = closeButtonId
         this.disableEnterKeyPress = false
@@ -12,10 +14,12 @@ export class Modal {
     
     handle() {
 
-        if (!state.isPlaying && this.closeButton) {
+        if (!state.isPlaying && !this.isResult) {
             this.modal.style.display = 'none'
         } else {
-            this.modal.style.display = 'flex'
+            if (this.modal.id != 'stats-wrapper') {
+                this.modal.style.display = 'flex'
+            }
         }
 
         if (this.openButton) {
@@ -28,7 +32,9 @@ export class Modal {
             this.closeButton.addEventListener('click', () => {
                 this.close()
             })
-        } else {
+        }
+
+        if (this.isResult) {
             setInterval(updateDisplayTime, 1000)
         }
 
@@ -49,17 +55,26 @@ export class Modal {
     }
 
     open() {
+        console.log('abriu', this.modal)
         this.modal.style.display = 'flex'
         setTimeout(() => {
-            this.modal.style.opacity = '1';
-            this.modal.style.visibility = 'visible';
-        }, 10); 
-        this.disableEnterKeyPress = true;
-        setTimeout(() => { this.disableEnterKeyPress = false; }, 100);
+            this.modal.style.opacity = '1'
+            this.modal.style.visibility = 'visible'
+        }, 10)
+        this.disableEnterKeyPress = true
+        setTimeout(() => { this.disableEnterKeyPress = false; }, 100)
+        if (this.openButton) {
+            this.openButton.style.backgroundColor = brown
+            this.openButton.style.color = 'white'
+        }
     }
     
     close() {
         this.modal.style.display = 'none'
+        if (this.openButton) {
+            this.openButton.style.backgroundColor = ''
+            this.openButton.style.color = ''
+        }
     }
 
     isOpen() {
@@ -67,8 +82,9 @@ export class Modal {
     }
 }
 
-export const instructionsModal = new Modal(instructionsWrapper, instructionsOpen, instructionsClose)
-export const resultModal = new Modal(resultWrapper)
+export const instructionsModal = new Modal(instructionsWrapper, instructionsOpen, instructionsClose, false)
+export const statsModal = new Modal(statsWrapper, statsOpen, statsClose, false)
+export const resultModal = new Modal(resultWrapper, false, false, true)
 
 function canOpen() {
     return !instructionsModal.isOpen();

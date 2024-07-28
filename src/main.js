@@ -4,7 +4,7 @@ import { populateLetters } from "./CESARdle/game/gameUtils.js";
 import { toggleKeysActivity } from "./CESARdle/game/gameStyles.js";
 import { waitKeyClick, waitKeyPress } from "./CESARdle/game/events.js";
 import { isPlaying, updateLocalStorage } from "./CESARdle/game/storage.js";
-import { instructionsModal, resultModal } from "./CESARdle/content/Modal.js";
+import { instructionsModal, resultModal, statsModal } from "./CESARdle/content/Modal.js";
 
 // console.log(word)
 
@@ -16,6 +16,7 @@ populateLetters()
 
 instructionsModal.handle()
 resultModal.handle()
+statsModal.handle()
 
 if (isPlaying) {
     toggleKeysActivity()

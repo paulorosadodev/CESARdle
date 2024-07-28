@@ -20,8 +20,31 @@ body {
     height: 100dvh;
 }
 
+header {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5.625rem;
+}
+
 .modal-opener {
-    z-index: 9999;
+    margin-top: 0.625rem;
+    z-index: 9998;
+    background: none;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--main-color);
+    border-radius: 20%;
+    color: var(--main-color);
+    transition: all .2s;
+}
+
+.modal-opener:hover {
+    cursor: pointer;
+    background-color: var(--main-color);
+    color: white;
 }
 
 #screen {
@@ -32,22 +55,7 @@ body {
     z-index: 9998;
 }
 
-#open-instructions {
-    background: none;
-    border: none;
-    height: 24px;
-    width: 24px;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    color: rgb(105, 20, 14);
-}
-
-#open-instructions:hover {
-    cursor: pointer;
-}
-
-#instructions-wrapper {
+#instructions-wrapper, #stats-wrapper {
     display: none;
     background-color: #69140e83;
     z-index: 9999;
@@ -58,7 +66,7 @@ body {
     align-items: center;
 }
 
-#instructions {
+#instructions, #stats {
     background-color: var(--main-color);
     position: relative;
     color: white;
@@ -107,13 +115,13 @@ body {
     width: fit-content;
 }
 
-#instructions svg {
+#instructions svg, #stats svg {
     position: absolute;
     top: 10px;
     right: 15px;
 }
 
-#instructions svg:hover {
+#instructions svg:hover, #stats svg:hover {
     cursor: pointer;
 }
 
@@ -437,21 +445,26 @@ img {
 
 @media (max-width: 481px) { 
 
+    header {
+        justify-content: space-between;
+        padding: 0 0.625rem;
+    }
+
     #instructions {
         width: 95dvw;
-        padding: 40px 20px 15px 20px;
+        padding: 2.5rem 1.25rem 0.9375rem 1.25rem;
     }
 
     #instruction-wrapper {
         width: 100%;
-        gap: 20px;
+        gap: 1.25rem;
         justify-content: center;
     }
 
     #this {
         text-align: justify;
-        font-size: 16px;
-        gap: 40px;
+        font-size: 1rem;
+        gap: 2.5rem;
         justify-content: center;
     }
 

@@ -2,6 +2,10 @@ export const instructionsOpen = document.querySelector('#open-instructions')
 export const instructionsClose = document.querySelector('#close-instructions')
 export const instructionsWrapper = document.querySelector('#instructions-wrapper')
 
+export const statsOpen = document.querySelector('#open-stats')
+export const statsClose = document.querySelector('#close-stats')
+export const statsWrapper = document.querySelector('#stats-wrapper')
+
 export const screen = document.querySelector('#screen')
 
 export const displayTime = document.querySelector('#display-time')

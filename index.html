@@ -13,9 +13,38 @@
 </head>
 <body>
     <div id="screen"></div>
-    <button id="open-instructions" class="modal-opener">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-help"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
-    </button>
+    <div id="stats-wrapper" class="modal">
+        <div id="stats">
+            <svg xmlns="http://www.w3.org/2000/svg" id="close-stats" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+            <h2>Seu desempenho</h2>
+            <div id="stats-display">
+                <div id="1rows">
+                    <span class="stats-title"></span>
+                    <div class="stats-bar"></div>
+                </div>
+                <div id="2rows">
+                    <span class="stats-title"></span>
+                    <div class="stats-bar"></div>
+                </div>
+                <div id="3rows">
+                    <span class="stats-title"></span>
+                    <div class="stats-bar"></div>
+                </div>
+                <div id="4rows">
+                    <span class="stats-title"></span>
+                    <div class="stats-bar"></div>
+                </div>
+                <div id="5rows">
+                    <span class="stats-title"></span>
+                    <div class="stats-bar"></div>
+                </div>
+                <div id="lost">
+                    <span class="stats-title"></span>
+                    <div class="stats-bar"></div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div id="instructions-wrapper">
         <div id="instructions">
             <svg xmlns="http://www.w3.org/2000/svg" id="close-instructions" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
@@ -51,7 +80,15 @@
             </div>
         </div>
     </div>
-    <img src="./assets/images/logo.png" alt="CESARdle Logo">
+    <header>
+        <button id="open-stats" class="modal-opener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-no-axes-column"><line x1="18" x2="18" y1="18" y2="8"/><line x1="12" x2="12" y1="18" y2="4"/><line x1="6" x2="6" y1="18" y2="12"/></svg>
+        </button>
+        <img src="./assets/images/logo.png" alt="CESARdle Logo">
+        <button id="open-instructions" class="modal-opener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-help"><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
+        </button>
+    </header>
     <div id="div-wrapper">
         <div class="row" id="1">
             <div class="letter" style="border-bottom: 7px solid #69140E"></div>
