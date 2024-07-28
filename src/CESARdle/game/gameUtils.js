@@ -1,8 +1,8 @@
 import { word } from "./words.js"
 import { handleKeyPress } from "../index.js"
-import { isPlaying, tries } from "./storage.js"
+import { tries } from "./storage.js"
 import { letterBoxes } from "../content/elements.js"
-import { green, yellow, red, brown } from "../content/colors.js"
+import { green, yellow, red } from "../content/colors.js"
 
 export const getTriedWord = currentRowFirstLetter => {
     let triedWord = ''
@@ -18,11 +18,12 @@ export const checkEachLetter = (currentLetterBox, currentRowFirstLetter) => {
     let correctLetters = 0
 
     for (let x = currentLetterBox - 5 - currentRowFirstLetter; x < currentLetterBox - currentRowFirstLetter; x++) {
-        const key = document.querySelector(`#${letterBoxes[x+currentRowFirstLetter].textContent}`)
+        const key = document.querySelector(`#${letterBoxes[x + currentRowFirstLetter].textContent}`)
         // console.log(letterBoxes[x+currentRowFirstLetter].textContent.toLowerCase(), word[x].toLowerCase())
         if (letterBoxes[x+currentRowFirstLetter].textContent.toLowerCase() == word[x].toLowerCase()) {
-            letterBoxes[x+currentRowFirstLetter].style.backgroundColor = green;
             key.classList.add('greenkey')
+            key.style.backgroundColor = green;
+            letterBoxes[x+currentRowFirstLetter].style.backgroundColor = green;
             correctLetters++
         } else if (word.toLowerCase().includes(letterBoxes[x+currentRowFirstLetter].textContent.toLowerCase())) {
             letterBoxes[x+currentRowFirstLetter].style.backgroundColor = yellow;
