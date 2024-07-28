@@ -19,7 +19,6 @@ export const waitKeyClick = () => {
         if (state.isPlaying === true) {
             key.addEventListener('touchstart', (e) => {
                 touchHandled = true
-                key.classList.remove('active')
                 if (key.classList.contains('greenkey')) {
                     key.style.backgroundColor = '#04c758'
                     setTimeout(() => {

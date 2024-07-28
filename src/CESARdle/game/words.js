@@ -10,7 +10,8 @@ export const words = [
     'redes', 'sheet', 'views', 'macos', 'lista', 'mocks', 'tupla', 'teste', 'agile', 'techs', 
     'hacks', 'cyber', 'infos', 'azure', 'ifood', 'apple', 'nikon', 'epson', 'gopro', 'phone', 
     'tesla', 'games', 'trade', 'avast', 'arrow', 'specs', 'users', 'codes', 'mouse', 'notes', 
-    'slack', 'async', 'await', 'swift', 'scala', 'julia', 'cobol', 'ocaml', 'canva', 'krita',  
+    'slack', 'async', 'await', 'swift', 'scala', 'julia', 'cobol', 'ocaml', 'canva', 'krita',
+    'false', 'chunk', 'blobs', 'local',
 ]
 
 export function getDayOfYear(date) {
@@ -29,6 +30,16 @@ export function getWordOfTheDay() {
 
 export let word = getWordOfTheDay()
 
+export const updateWord = () => {
+    let lastWord = word
+    word = getWordOfTheDay()
+
+    if (lastWord == word) {
+        return false
+    }
+    return true
+}
+
 // export const word = words[Math.floor(Math.random() * words.length)]
 
 // function check(words) {
@@ -38,6 +49,7 @@ export let word = getWordOfTheDay()
 //     let min = 10
 //     let maxWord = ''
 //     let minWord = ''
+//     let wordsCont = 0
 
 //     for (let i of words) {
 //         checkWords[i] = 0
@@ -48,6 +60,7 @@ export let word = getWordOfTheDay()
 //             min = i.length
 //             minWord = i
 //         }
+//         wordsCont++
 //     }
 
 //     for (let i of words) {
@@ -62,7 +75,7 @@ export let word = getWordOfTheDay()
 //         repeatedWords = 'Nenhuma palavra repetida'
 //     }
 
-//     console.log(`\nPalavras repetidas: ${repeatedWords}\nMenor palavra: ${minWord} - ${min} letras\nMaior palavra: ${maxWord} - ${max} letras\n`)
+//     console.log(`\n${wordsCont} palavras\nPalavras repetidas: ${repeatedWords}\nMenor palavra: ${minWord} - ${min} letras\nMaior palavra: ${maxWord} - ${max} letras\n`)
 // }
 
 // check(words)

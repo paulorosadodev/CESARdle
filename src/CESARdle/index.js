@@ -1,10 +1,11 @@
 import { word } from "./game/words.js";
 import { state } from "./game/state.js";
-import { letterBoxes, screen } from "./content/elements.js";
 import { letterIsValid, wordIsValid } from "./utils.js";
+import { letterBoxes, screen } from "./content/elements.js";
 import { getTriedWord, checkEachLetter } from "./game/gameUtils.js";
 import { appendTriesInLocalStorage, updateIsPlayingInLocalStorage, setWordInLocalStorage } from "./game/storage.js";
 import { toggleKeysActivity, showResultDisplay, invalidWordAnimation, activateRow, changeNextLetterStyle } from "./game/gameStyles.js";
+
 
 let currentRow = 1
 let currentLetterBox = 0
@@ -12,9 +13,8 @@ let lettersInCurrentRow = 1
 let currentRowFirstLetter = 0
 let previousLetterBox = currentLetterBox - 1
 
-export const handleKeyPress = key => {
+export const handleKeyPress = (key) => {
     if (key == '' || key == 'BACKSPACE') {
-
         currentLetterBox -= 1
         previousLetterBox -= 1
     

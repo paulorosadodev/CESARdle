@@ -1,4 +1,4 @@
-import { word } from "./CESARdle/game/words.js";
+import { updateWord } from "./CESARdle/game/words.js";
 import { startDisplayTime } from "./CESARdle/content/time.js";
 import { populateLetters } from "./CESARdle/game/gameUtils.js";
 import { toggleKeysActivity } from "./CESARdle/game/gameStyles.js";
@@ -22,3 +22,9 @@ if (isPlaying) {
     waitKeyClick()
     waitKeyPress()
 }
+
+export const interval = setInterval(() => {
+    if (updateWord()) {
+        window.location.reload()
+    }
+}, 1000)

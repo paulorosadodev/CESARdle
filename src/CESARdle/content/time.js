@@ -1,4 +1,4 @@
-import { displayTime } from "./elements.js";
+import { displayTime } from "./elements.js"
 
 export const getTodayAndTomorrowDifference = () => {
     let now = new Date()
@@ -23,7 +23,9 @@ export const updateDisplayTime = () => {
     let minutes = getTodayAndTomorrowDifference().minutes
     let seconds = getTodayAndTomorrowDifference().seconds
 
-    displayTime.textContent = `${hours}:${minutes}:${seconds}`
+    if (displayTime) {
+        displayTime.textContent = `${hours}:${minutes}:${seconds}`
+    }
 }
 
 export const startDisplayTime = () => {
@@ -31,5 +33,7 @@ export const startDisplayTime = () => {
     let minutes = getTodayAndTomorrowDifference().minutes
     let seconds = getTodayAndTomorrowDifference().seconds
 
-    displayTime.textContent = `${hours}:${minutes}:${seconds}`
+    if (displayTime) {
+        displayTime.textContent = `${hours}:${minutes}:${seconds}`
+    }
 }

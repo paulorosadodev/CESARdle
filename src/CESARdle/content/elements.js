@@ -12,5 +12,8 @@ export const copied = document.querySelector('#copied')
 export const timerText = document.querySelector('#time')
 export const copyButton = document.querySelector('#copyGame')
 
+export const gameData = document.querySelector('#game-data')
+export const resultData = document.querySelector('#result-data')
+
 export const keys = document.querySelectorAll('.key')
 export const letterBoxes = document.querySelectorAll('.letter')

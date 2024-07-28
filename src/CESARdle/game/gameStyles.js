@@ -1,7 +1,7 @@
 import { word } from "./words.js"
 import { resultModal } from "../content/Modal.js"
 import { green, brown, red } from "../content/colors.js"
-import { letterBoxes, resultDisplay, resultWrapper, keys, timerText, copyButton, copied } from "../content/elements.js"
+import { letterBoxes, resultWrapper, keys, copied, resultData, copyButton, timerText } from "../content/elements.js"
 
 export const toggleKeysActivity = () => {
     keys.forEach(key => {
@@ -32,8 +32,8 @@ export const showResultDisplay = win => {
 
     h2.innerHTML = `A palavra era: <strong>${word}</strong>`
 
-    resultDisplay.firstElementChild.append(h1)
-    resultDisplay.firstElementChild.append(h2)
+    resultData.append(h1)
+    resultData.append(h2)
 
     resultModal.open()
 }
