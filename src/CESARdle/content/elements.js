@@ -31,3 +31,15 @@ export const letterBoxes = document.querySelectorAll('.letter')
 export const reloadMessage = document.querySelector('#stats p')
 export const statsMessage = document.querySelector('#stats-message')
 export const statsDataWrapper = document.querySelector('#stats-data-wrapper')
+
+export const winStreak = document.querySelector('#win-streak')
+export const gamesAmount = document.querySelector('#games-amount')
+export const winPercentual = document.querySelector('#win-percentual')
+
+export const one = document.querySelector('#one')
+export const two = document.querySelector('#two')
+export const four = document.querySelector('#four')
+export const five = document.querySelector('#five')
+export const three = document.querySelector('#three')
+export const lost = document.querySelector('#lostGame')
+

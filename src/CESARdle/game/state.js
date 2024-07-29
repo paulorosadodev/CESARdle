@@ -9,6 +9,6 @@ export const state = {
         three: 0,
         four: 0,
         five: 0,
-        lost: 0
+        lostGame: 0,
     },
 }

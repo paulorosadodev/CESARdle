@@ -1,7 +1,7 @@
 import { state } from "./game/state.js"
 import { words, word } from "./game/words.js"
 import { showCopied } from "./game/gameStyles.js"
-import { barsFill, dataAmount, dataPercentual, dataStreak, statsDisplay, statsMessage, statsDataWrapper, reloadMessage } from "./content/elements.js"
+import { barsFill, dataAmount, dataPercentual, dataStreak, statsMessage, gamesAmount, winPercentual, winStreak} from "./content/elements.js"
 
 export const letterIsValid = key => {
     const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -96,13 +96,11 @@ export const displayGameStats = () => {
     const gameStats = getGameStats()
 
     if (gameStats.gamesAmount == 0) {
-        statsMessage.style.display = 'flex'
+        changeStatsStyles()
     } else {
-        statsMessage.style.display = 'none'
+        resetStatsStyles()
         barsFill.forEach(barFill => {
-            let barHeight = getTriePercent(gameStats.triesAmount, barFill.id)
             barFill.parentElement.previousElementSibling.textContent = gameStats.triesAmount[barFill.id]
-            barFill.style.transform = `scaleY(${barHeight}%)`
         })
     
         dataStreak.textContent = gameStats.winStreak
@@ -111,7 +109,7 @@ export const displayGameStats = () => {
     }
 }
 
-function getGameStats() {
+export const getGameStats = () => {
     let ctx = {}
 
     ctx['winStreak'] = state.winStreak
@@ -119,7 +117,7 @@ function getGameStats() {
 
     ctx['gamesAmount'] = getTriePercent(ctx.triesAmount, true)
 
-    let lostPercent = getTriePercent(ctx.triesAmount, 'lost')
+    let lostPercent = getTriePercent(ctx.triesAmount, 'lostGame')
 
     if (isNaN(lostPercent)) {
         ctx['winPercetual'] = 0
@@ -130,7 +128,7 @@ function getGameStats() {
     return ctx
 }
 
-function getTriePercent(triesAmount, trie) {
+export const getTriePercent = (triesAmount, trie) => {
     let sum = 0
     let triesPercents = {}
 
@@ -147,4 +145,30 @@ function getTriePercent(triesAmount, trie) {
     }
 
     return triesPercents[trie]
+}
+
+function changeStatsStyles() {
+    statsMessage.style.display = 'flex'
+    winStreak.style.opacity = '1' 
+    gamesAmount.style.opacity = '1' 
+    winPercentual.style.opacity = '1' 
+    winStreak.style.visibility = 'visible' 
+    gamesAmount.style.visibility = 'visible' 
+    winPercentual.style.visibility = 'visible' 
+    winStreak.style.transform = 'translateY(0x)' 
+    gamesAmount.style.transform = 'translateY(0x)' 
+    winPercentual.style.transform = 'translateY(0x)' 
+}
+
+function resetStatsStyles() {
+    statsMessage.style.display = 'none'
+    winStreak.style.opacity = '' 
+    gamesAmount.style.opacity = '' 
+    winPercentual.style.opacity = '' 
+    winStreak.style.visibility = '' 
+    gamesAmount.style.visibility = '' 
+    winPercentual.style.visibility = '' 
+    winStreak.style.transform = '' 
+    gamesAmount.style.transform = ''
+    winPercentual.style.transform = '' 
 }

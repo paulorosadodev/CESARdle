@@ -131,6 +131,6 @@ function getKey(row) {
         case 5:
             return 'five'
         default:
-            return 'lost'
+            return 'lostGame'
     }
 }
