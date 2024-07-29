@@ -1,10 +1,10 @@
 ![cesardle](https://github.com/user-attachments/assets/5e4cc0ae-4c7c-42eb-941e-c7c07862e2cd)
 
-<p align="center">O <b>CESARdle</b> é uma versão dos jogos Wordle/Termoo em que o jogador possui 5 chances para acertar a palavra do dia.</p>
+<p align="center">O <b>CESARdle</b> é uma versão do jogo Wordle em que o jogador possui 5 chances para acertar a palavra do dia.</p>
 
 ---
 
-# 🚀 Tecnologias
+## 🚀 Tecnologias
 <div style="text-decoration: none;" align="center">
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" width="150px" height="50px"/>
   <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" width="150px" height="50px"/>
@@ -14,7 +14,7 @@
 <br>
 <br>
 
-# 🎮 Como jogar
+## 🎮 Como jogar
 
 ### 1°) Acesse: 
 <div style="text-decoration: none;" align="center">
