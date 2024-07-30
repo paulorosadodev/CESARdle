@@ -102,7 +102,7 @@ header {
     gap: 0.3125rem;
     color: white;
     transition: all .3s;
-    transform: translateY(10px);
+    transform: translateY(0.625rem);
 }
 
 .data-stats.active {
@@ -145,13 +145,13 @@ header {
     background-color: #69140e3f;
     backdrop-filter: blur(2px);
     position: absolute;
-    top: 0px;
+    top: 0rem;
     z-index: 9998;
     height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 1.25rem;
     justify-content: center;
     align-items: center;
 }
@@ -588,6 +588,11 @@ img, #repository-link {
 }
 
 @media (max-width: 395px) {
+
+    .letter {
+        font-size: 2.4rem;
+    }
+
     #result-display h1 {
         font-size: 1.7rem;
     }
@@ -722,7 +727,7 @@ img, #repository-link {
     }
 
     #enter {
-        max-width: 3.75rem;
+        min-width: 3.75rem;
     }
     
     #result-display {
@@ -749,12 +754,17 @@ img, #repository-link {
         margin-bottom: 9.375rem;
     }
 
+    #stats-display {
+        gap: 1%;
+    }
+
     .stats-bar {
-        max-width: 2.3rem;
+        width: 2.3rem;
     }
 
     .stats-title {
         font-size: 0.7rem;
+        white-space: pre-wrap;  
     }
 
     .data-stats {

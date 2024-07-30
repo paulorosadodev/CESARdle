@@ -20,6 +20,20 @@ export const updateLocalStorage = () => {
         tries = state.tries
         lastWord = state.lastWord
         isPlaying = state.isPlaying
+
+        if (!triesAmount) {
+            localStorage.setItem('triesAmount', JSON.stringify(state.triesAmount))
+            triesAmount = JSON.parse(localStorage.getItem('triesAmount'))
+        } else {
+            state.triesAmount = triesAmount
+        }
+
+        if (!winStreak) {
+            localStorage.setItem('winStreak', state.winStreak)
+            winStreak = localStorage.getItem('winStreak')
+        } else {
+            state.winStreak = Number(winStreak)
+        }
     } else {
         if (!tries) {
             localStorage.setItem('tries', state.tries)
@@ -62,3 +76,7 @@ export const updateWinStreak = () => {
 export const updateTriesAmount = () => {
     localStorage.setItem('triesAmount', JSON.stringify(state.triesAmount))
 }
+
+export const verifyLocalStorageLoaded = () => {
+    return tries !== null && lastWord !== null && winStreak !== null && isPlaying !== null && triesAmount !== null;
+};

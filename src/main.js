@@ -4,14 +4,18 @@ import { startDisplayTime } from "./CESARdle/content/time.js";
 import { populateLetters } from "./CESARdle/game/gameUtils.js";
 import { toggleKeysActivity } from "./CESARdle/game/gameStyles.js";
 import { waitKeyClick, waitKeyPress } from "./CESARdle/game/events.js";
-import { isPlaying, updateLocalStorage } from "./CESARdle/game/storage.js";
+import { isPlaying, updateLocalStorage, verifyLocalStorageLoaded} from "./CESARdle/game/storage.js";
 import { instructionsModal, resultModal, statsModal } from "./CESARdle/content/Modal.js";
-
-startDisplayTime()
 
 updateLocalStorage()
 
-displayGameStats()
+if (verifyLocalStorageLoaded()) {
+    displayGameStats();
+} else {
+    window.location.reload()
+}
+
+startDisplayTime()
 
 populateLetters()
 

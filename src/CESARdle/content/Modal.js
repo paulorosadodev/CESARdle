@@ -2,7 +2,7 @@ import { brown } from './colors.js'
 import { state } from '../game/state.js'
 import { updateDisplayTime } from './time.js'
 import { getGameStats, getTriePercent } from '../utils.js'
-import { instructionsWrapper, instructionsOpen, instructionsClose, resultWrapper, statsWrapper, statsOpen, statsClose, gamesAmount, winPercentual, winStreak, one, two, three, four, five, lost, barsFill } from './elements.js'
+import { instructionsWrapper, instructionsOpen, instructionsClose, resultWrapper, statsWrapper, statsOpen, statsClose, gamesAmount, winPercentual, winStreak, one, two, three, four, five, lostGame, barsFill } from './elements.js'
 
 export class Modal {
     constructor(modal, openButtonId, closeButtonId, isResult) {

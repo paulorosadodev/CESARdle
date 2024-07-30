@@ -41,5 +41,5 @@ export const two = document.querySelector('#two')
 export const four = document.querySelector('#four')
 export const five = document.querySelector('#five')
 export const three = document.querySelector('#three')
-export const lost = document.querySelector('#lostGame')
+export const lostGame = document.querySelector('#lostGame')
 

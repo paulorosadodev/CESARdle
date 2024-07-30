@@ -12,7 +12,7 @@ export const words = [
     'tesla', 'games', 'trade', 'avast', 'arrow', 'specs', 'users', 'codes', 'mouse', 'notes', 
     'slack', 'async', 'await', 'swift', 'scala', 'julia', 'cobol', 'ocaml', 'canva', 'krita',
     'false', 'chunk', 'blobs', 'local', 'wires', 'nosql', 'redis', 'mongo', 'daily', 'issue',
-    'utils', 'popup', 'space', 'kodak',
+    'utils', 'popup', 'space', 'kodak', 'field'
 ]
 
 export function getDayOfYear(date) {
