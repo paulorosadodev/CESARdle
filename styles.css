@@ -589,8 +589,20 @@ img, #repository-link {
 
 @media (max-width: 395px) {
 
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        width: 100dvw;
+        gap: 0;
+    }
+
     .letter {
         font-size: 2.4rem;
+    }
+
+    #instructions {
+        margin-top: 3.6rem;
     }
 
     #result-display h1 {
@@ -614,20 +626,26 @@ img, #repository-link {
     }
 
     #stats {
-        margin-bottom: 8rem;
+        margin-top: 4rem;
     }
 
     .stats-bar {
         max-width: 2rem;
     }
-
+    
     .stats-title {
-        font-size: 0.6rem;
+        font-size: 0.7rem !important;
+
+    }
+
+    #stats-display {
+        gap: 100px;
     }
 
     .data-stats {
         max-width: 5rem;
         margin-bottom: 0.4rem;
+        gap: 1%;
     }
 
     .data-number {
@@ -636,6 +654,10 @@ img, #repository-link {
 
     .data-title {
         font-size: 0.6rem;
+    }
+
+    #stats-data-wrapper {
+        gap: 5%;
     }
 
     #stats p {
