@@ -29,7 +29,7 @@ export function getWordOfTheDay() {
     return words[wordIndex]
 }
 
-export let word = 'erick'
+export let word = getWordOfTheDay()
 
 export const updateWord = () => {
     let lastWord = word
