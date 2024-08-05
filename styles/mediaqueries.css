@@ -1,0 +1,400 @@
+@media (max-width: 395px) {
+
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        width: 100dvw;
+        gap: 0;
+    }
+
+    .letter {
+        font-size: 2.4rem;
+    }
+
+    #instructions {
+        margin-top: 3.6rem;
+    }
+
+    #result-display h1 {
+        font-size: 1.7rem;
+    }
+
+    #result-display h2 {
+        font-size: 1.2rem;
+    }
+
+    #copyGame {
+        font-size: 0.8rem;
+    }
+
+    #time {
+        font-size: 0.8rem;
+    }
+
+    #display-time {
+        font-size: 1.5rem;
+    }
+
+    #stats {
+        margin-top: 4rem;
+    }
+
+    .stats-bar {
+        max-width: 2rem;
+    }
+    
+    .stats-title {
+        font-size: 0.7rem !important;
+
+    }
+
+    #stats-display {
+        gap: 100px;
+    }
+
+    .data-stats {
+        max-width: 5rem;
+        margin-bottom: 0.4rem;
+        gap: 1%;
+    }
+
+    .data-number {
+        font-size: 1.5rem;
+    }
+
+    .data-title {
+        font-size: 0.6rem;
+    }
+
+    #stats-data-wrapper {
+        gap: 5%;
+    }
+
+    #stats p {
+        font-size: 0.625rem;
+    }
+}
+
+@media (max-width: 481px) { 
+
+    header {
+        justify-content: space-between;
+        padding: 0 0.625rem;
+    }
+
+    #instructions, #stats {
+        width: 95dvw;
+        padding: 2.5rem 1.25rem 0.9375rem 1.25rem;
+    }
+
+    #instruction-wrapper, #stats-wrapper {
+        width: 100%;
+        gap: 1.25rem;
+        justify-content: center;
+    }
+
+    #instruction-wrapper {
+        width: 80%;
+    }
+
+    .instruction-wrapper p {
+        letter-spacing: -0.07rem;
+    }
+
+    #this {
+        text-align: justify;
+        font-size: 1rem;
+        justify-content: space-evenly;
+    }
+
+    #result div {
+        margin-bottom: 11.25rem;
+        height: 35%;
+        width: 75%;
+    }
+
+    img, #repository-link {
+        width: 7.5rem;
+        height: 4.625rem;
+        margin-bottom: 0.625rem;
+    }
+
+    #div-wrapper {
+        margin-top: 0.9375rem;
+    }
+
+    .row {
+        height: 15dvw;
+    }
+
+    .letter {
+        width: 15dvw;
+        height: 100%;
+        font-size: 2.625rem;
+    }
+
+    #keyboard {
+        width: 100dvw;
+        margin: auto;
+        margin-bottom: 0.9375rem;
+        font-size: 0.9375rem;
+        position: absolute;
+        bottom: 0;
+    }
+
+    .keyboardrow {
+        width: 90%;
+        margin: auto;
+        justify-content: center;
+    }
+
+    .key {
+        min-width: 10%;
+        min-height: 4.375rem;
+    }
+
+    .special {
+        font-size: 0.875rem;
+        margin-left: 0.3125rem;
+    }
+
+    #enter {
+        min-width: 3.75rem;
+    }
+    
+    #result-display {
+        max-width: 90%;
+        justify-content: center;
+        gap: 1.075rem;
+        height: 40%;
+    }
+
+    #time {
+        max-width: 50%;
+    }
+
+    #data {
+        gap: 0.9375rem;
+    }
+
+    #data button {
+        height: 5rem;
+        max-width: 50%;
+    }
+
+    #stats {
+        margin-bottom: 9.375rem;
+    }
+
+    #stats-display {
+        gap: 1%;
+    }
+
+    .stats-bar {
+        width: 2.3rem;
+    }
+
+    .stats-title {
+        font-size: 0.7rem;
+        white-space: pre-wrap;  
+    }
+
+    .data-stats {
+        max-width: 6rem;
+        margin-bottom: 0.4375rem;
+    }
+
+    .data-number {
+        font-size: 2rem;
+    }
+
+    .data-title {
+        font-size: 0.8rem;
+    }
+
+    .key {
+        min-width: 8dvw;
+        min-height: 8dvh;
+        max-width: 8dvw;
+        max-height: 8dvh;
+    }
+
+    #stats p {
+        font-size: 0.8rem;
+    }
+
+    #stats-message h3{
+        width: 80%;
+    }
+
+}
+
+@media (max-width: 768px) and (min-width: 482px) {
+
+    header {
+        margin-bottom: 1%;
+    }
+
+    .row {
+        height: 8dvh;
+        width: 58dvw;
+    }
+    
+    .letter {
+        font-size: 230%;
+        width: calc(min(8dvh, 58dvw)); 
+        height: calc(min(8dvh, 58dvw));
+    }
+
+    #keyboard {
+        position: absolute;
+        bottom: 0;
+        height: 40dvh;
+        width: 100dvw;
+    }
+
+    .key {
+        height: 10dvh;
+        width: 8dvw;
+    }
+
+    #enter {
+        min-width: 15dvw;
+    }
+
+    #instructions, #stats {
+        width: 90%;
+        margin-top: 8%;
+    }
+
+    #instructions h2 {
+        margin-top: 4%;
+    }
+
+    #stats-display {
+        justify-content: space-evenly;
+        gap: 15%;
+    }
+
+    .stats-content {
+        max-width: 1%;
+    }
+
+    .stats-bar {
+        width: 3.125rem;
+    }
+
+    .stats-title {
+        font-size: 0.625rem;
+    }
+
+    .data-stats {
+        width: 6.25rem;
+    }
+
+    .data-number {
+        font-size: 2.2rem;
+    }
+
+    .data-title {
+        font-size: 0.9rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1359px) {
+
+    header {
+        margin-bottom: 1%;
+    }
+
+    .row {
+        height: 8.5dvh;
+        width: 60dvw;
+    }
+    
+    .letter {
+        font-size: 280%;
+        width: calc(min(8.5dvh, 60dvw)); 
+        height: calc(min(8.5dvh, 60dvw));
+    }
+
+    #keyboard {
+        position: absolute;
+        bottom: 0;
+        height: 40dvh;
+        width: 100dvw;
+    }
+
+    .key {
+        height: 8dvh;
+        width: 6dvw;
+    }
+
+    #enter {
+        min-width: 15dvw;
+    }
+
+    #instructions, #stats {
+        width: 90%;
+        margin-top: 8%;
+    }
+
+    #instructions h2 {
+        margin-top: 4%;
+    }
+
+    #stats-display {
+        justify-content: space-evenly;
+        gap: 15%;
+    }
+
+    .stats-content {
+        max-width: 1%;
+    }
+
+    .stats-bar {
+        width: 3.125rem;
+    }
+
+    .stats-title {
+        font-size: 0.625rem;
+    }
+
+    .data-stats {
+        width: 6.25rem;
+    }
+
+    .data-number {
+        font-size: 2.2rem;
+    }
+
+    .data-title {
+        font-size: 0.9rem;
+    }
+}
+
+@media (min-height: 700px) and (min-width: 1360px) {
+
+    header {
+        margin-bottom: 1%;
+    }
+
+    .row {
+        height: 9dvh;
+        width: 25dvw;
+    }
+    
+    .letter {
+        font-size: 280%;
+        width: calc(min(9dvh, 25dvw)); 
+        height: calc(min(9dvh, 25dvw));
+    }
+
+    #keyboard {
+        position: absolute;
+        bottom: 0;
+        height: 35dvh;
+        width: 100dvw;
+    }
+}

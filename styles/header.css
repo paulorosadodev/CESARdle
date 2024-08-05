@@ -1,0 +1,38 @@
+header {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100dvw;
+    gap: 5.625rem;
+}
+
+img, #repository-link {
+    width: 7.0rem;
+    height: 4rem;
+    margin-bottom: 0.625rem;
+    place-self: center;
+}
+
+#repository-link {
+    z-index: 9998;
+}
+
+button.modal-opener {
+    margin-top: 0.625rem;
+    z-index: 9998;
+    background: none;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.125rem solid var(--main-color);
+    border-radius: 20%;
+    color: var(--main-color);
+    transition: all .2s;
+}
+
+button.modal-opener:hover {
+    cursor: pointer;
+    background-color: var(--main-color);
+    color: white;
+}

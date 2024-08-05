@@ -1,0 +1,95 @@
+#instructions-wrapper {
+    display: none;
+    background-color: #69140e83;
+    z-index: 9999;
+    position: absolute;
+    width: 100dvw;
+    height: 100dvh;
+    justify-content: center;
+    align-items: center;
+}
+
+#instructions {
+    background-color: var(--main-color);
+    position: relative;
+    color: white;
+    min-width: 60dvw;
+    z-index: 9999;
+    display: flex;
+    margin-bottom: 11.25rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.875rem 2.1875rem 0.625rem 2.1875rem;
+    border-radius: 0.625rem;
+    box-shadow: 0rem 0rem 0.3125rem #000000a4;
+    font-family: 'Roboto', sans-serif;
+    gap: 1.25rem;
+}
+
+#paulo {
+    margin-top: 0.9375rem;
+    font-size: 0.6875rem;
+}
+
+#paulo a {
+    text-decoration: none;
+    color: var(--key-green);
+    font-weight: 700;
+}
+
+#paulo a:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#instructions > p {
+    margin-bottom: 0.625rem;
+}
+
+.instruction-wrapper {
+    display: flex;
+    flex-direction: column;
+    pointer-events: none;
+    align-items: center;
+    justify-content: center;
+    gap: 1.25rem;
+    height: 12.5rem;
+    width: fit-content;
+}
+
+#instructions svg {
+    position: absolute;
+    top: 0.625rem;
+    right: 0.9375rem;
+    z-index: 9999;
+}
+
+#instructions svg:hover {
+    cursor: pointer;
+}
+
+#this {
+    align-items: flex-start;
+    justify-content: space-around;
+    text-align: justify;
+}
+
+#instruction-wrapper {
+    margin-top: 0.3125rem;
+    display: flex;
+    gap: 2.5rem;
+}
+
+.letterInstructions {
+    width: 3.4375rem;
+    height: 3.4375rem;
+    border-radius: 0.375rem;
+    font-size: 2.1875rem;
+    color: white;
+    font-weight: 600;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
