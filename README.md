@@ -14,26 +14,55 @@
 <br>
 <br>
 
+## ✨ Funcionalidades principais
+
+### 1°) Teclado Interativo: 
+<div align="center">
+  
+  ![2024-08-05 22-10-46 (online-video-cutter com) (1)](https://github.com/user-attachments/assets/f5665218-b276-4b09-9fc8-1d494180b1ec)
+
+</div>
+
+<br>
+
+### 2°) Mapeamento de Desempenho pelo Local Storage: 
+<div align="center">
+  
+  ![2024-08-05 22-28-20 (1)](https://github.com/user-attachments/assets/bd9f0945-d531-41b4-84dd-007a4ff4e0d6)
+
+</div>
+
+<br>
+
+### 3°) Compartilhamento de Jogos: 
+<div align="center">
+  
+  ![2024-08-05 22-24-01 (online-video-cutter com)](https://github.com/user-attachments/assets/f03f837e-6f70-4c7d-bc59-4fa5efe6baef)
+
+</div>
+
+<br>
+
+### 4°) Tratamento de Palavras Inválidas: 
+<div align="center">
+  
+  ![2024-08-05 22-16-45 (online-video-cutter com)](https://github.com/user-attachments/assets/716e963b-bb51-4910-bfc5-80e2843adb0d)
+
+</div>
+
+<br>
+
 ## 🎮 Como jogar
 
-### 1°) Acesse: 
+<div align="center">
+  
+  ![image](https://github.com/user-attachments/assets/2be0c88b-7d50-4809-8d67-d2e3e4f07ed2)
+
+</div>
+
+## 🔗 Jogue agora
 <div style="text-decoration: none;" align="center">
   <a href="https://paulorosadodev.github.io/CESARdle/" target="_blank">
     <img src="https://img.shields.io/badge/CESARdle-F75D13?style=for-the-badge&logo=github&logoColor=white" height="50px"/>
   </a>
 </div>
-
-### 2°) Instruções:
-<div style="text-decoration: none; display: flex; align-items: center;" align="center">
-  <h3>Você tem 5 chances para acertar a palavra do dia</h3>
-  <h3>Todas as palavras possuem relação com tecnologia e/ou com a CESAR School</h3>
-
-  <br>
-  
-  ![image](https://github.com/user-attachments/assets/ca34a396-2363-47b5-b926-9b0084086e06)
-  
-</div>
-
-
-
-
