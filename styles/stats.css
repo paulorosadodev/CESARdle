@@ -1,5 +1,5 @@
 #stats-wrapper {
-    display: none;
+    display: flex;
     background-color: #69140e83;
     z-index: 9999;
     position: absolute;

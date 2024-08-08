@@ -4,15 +4,16 @@ export const words = [
     'graph', 'hooks', 'route', 'scope', 'patch', 'proxy', 'regex', 'shift', 'slice', 'split',
     'vectr', 'linux', 'adobe', 'admin', 'cloud', 'flask', 'click', 'drive', 'modal', 'pixel',
     'macro', 'table', 'excel', 'track', 'email', 'fetch', 'alert', 'print', 'media', 'clone',
-    'erick', 'erico', 'cesar', 'macos', 'lista', 'mocks', 'tupla', 'cafes', 'unity', 'scrum',
+    'erick', 'nikon', 'cesar', 'macos', 'lista', 'mocks', 'tupla', 'cafes', 'unity', 'scrum',
     'login', 'chart', 'event', 'frame', 'layer', 'model', 'reset', 'robot', 'share', 'smart',
     'sound', 'style', 'virus', 'class', 'limit', 'nodes', 'react', 'while', 'yield', 'nuvem',
     'redes', 'sheet', 'views', 'apolo', 'joyce', 'carol', 'cruds', 'teste', 'agile', 'techs', 
-    'hacks', 'cyber', 'infos', 'azure', 'ifood', 'apple', 'nikon', 'epson', 'gopro', 'phone', 
+    'hacks', 'cyber', 'infos', 'azure', 'ifood', 'apple', 'erico', 'epson', 'gopro', 'phone', 
     'tesla', 'games', 'trade', 'avast', 'arrow', 'specs', 'users', 'codes', 'mouse', 'notes', 
     'slack', 'async', 'await', 'swift', 'scala', 'julia', 'cobol', 'ocaml', 'canva', 'krita',
     'false', 'chunk', 'blobs', 'local', 'wires', 'nosql', 'redis', 'mongo', 'daily', 'issue',
-    'utils', 'popup', 'space', 'kodak', 'field'
+    'utils', 'popup', 'space', 'kodak', 'field', 'clion', 'vetor', 'geysa', 'kwarg', 'qubit',
+    'basic', 'popos', 'crack', 'guard', 'relay', 'grafo', 'skill'
 ]
 
 export function getDayOfYear(date) {
@@ -29,7 +30,7 @@ export function getWordOfTheDay() {
     return words[wordIndex]
 }
 
-export let word = 'erick'
+export let word = getWordOfTheDay()
 
 export const updateWord = () => {
     let lastWord = word
